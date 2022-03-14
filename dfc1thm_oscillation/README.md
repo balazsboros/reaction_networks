@@ -1,0 +1,1 @@
+A Mathematica notebook (.nb file, also saved as a .pdf file) with the calculations in the paper "Oscillations in planar deficiency-one mass-action systems" by B. Boros and J. Hofbauer, see https://link.springer.com/content/pdf/10.1007/s10884-021-10051-z.pdf.
