@@ -1,2 +1,3 @@
 # reaction_networks
-Mathematica and MATLAB codes
+Supplementary materials to some of my papers.
+Mainly Mathematica and MATLAB codes.
