@@ -1,7 +1,6 @@
 # reaction_networks
-Supplementary materials to some of my papers.  
-Mainly Mathematica and MATLAB codes.  
-Mathematica notebooks (.nb files) are also saved as a .pdf file.
+Supplementary materials to some of my papers (on chemical reaction networks).  
+Mainly Mathematica and MATLAB codes. Mathematica notebooks (.nb files) are also saved as a .pdf file.
 
 ## /dfc1thm_oscillation
 B. Boros, J. Hofbauer  
