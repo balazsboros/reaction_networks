@@ -1,4 +1,3 @@
-# reaction_networks
 Supplementary materials to some of my papers (on chemical reaction networks).  
 Mainly Mathematica and MATLAB codes. Mathematica notebooks (.nb files) are also saved as a .pdf file.  
 A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/.
