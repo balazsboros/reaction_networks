@@ -2,5 +2,5 @@ A Mathematica notebook (.nb file, also saved as a .pdf file) containing the calc
 
 M. Banaji, B. Boros, J. Hofbauer  
 **Adding species to chemical reaction networks: preserving rank preserves nondegenerate behaviours**  
-*Submitted*  
-https://arxiv.org/pdf/2112.06801.pdf
+*Applied Mathematics and Computation*, 426:127109, 2022
+https://www.sciencedirect.com/science/article/pii/S009630032200193X/pdf
