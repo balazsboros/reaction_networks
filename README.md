@@ -4,12 +4,12 @@ A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/
 
 ### /add_dependent_species
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
-&nbsp;&nbsp;&nbsp;&nbsp;**Adding species to chemical reaction networks: preserving rank preserves nondegenerate behaviours**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Adding species to chemical reaction networks: Preserving rank preserves nondegenerate behaviours**  
 &nbsp;&nbsp;&nbsp;&nbsp;*Applied Mathematics and Computation*, 426:127109, 2022    
 &nbsp;&nbsp;&nbsp;&nbsp;https://www.sciencedirect.com/science/article/pii/S009630032200193X/pdf
 
 ### /dfc1thm_oscillation
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
-&nbsp;&nbsp;&nbsp;&nbsp;**Oscillations in Planar Deficiency-One Mass-Action Systems**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Oscillations in planar deficiency-one mass-action systems**  
 &nbsp;&nbsp;&nbsp;&nbsp;*Journal of Dynamics and Differential Equations*, 2021  
 &nbsp;&nbsp;&nbsp;&nbsp;https://link.springer.com/content/pdf/10.1007/s10884-021-10051-z.pdf
