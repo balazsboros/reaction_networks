@@ -1,4 +1,4 @@
-A Mathematica notebook (.nb file, also saved as a .pdf file) containing the calculations and
+A Mathematica notebook (.nb file, also saved as a .pdf file) containing the calculations and  
 a MATLAB code (.m file, along with 3 files with the ODEs) that produces the figures in the paper  
 
 B. Boros, J. Hofbauer  
