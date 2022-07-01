@@ -2,6 +2,10 @@ Supplementary materials to some of my papers on chemical reaction networks.
 Mainly Mathematica and MATLAB codes. Mathematica notebooks (.nb files) are also saved as a .pdf file.  
 A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/.
 
+### /3species_4reactions
+&nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros  
+&nbsp;&nbsp;&nbsp;&nbsp;**The smallest bimolecular mass-action CRNs admitting Andronov-Hopf bifurcation**  
+
 ### /add_dependent_species
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Adding species to chemical reaction networks: Preserving rank preserves nondegenerate behaviours**  
