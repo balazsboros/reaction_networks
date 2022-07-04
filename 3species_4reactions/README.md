@@ -6,4 +6,4 @@ M. Banaji, B. Boros
 
 Also added are:
 * the table (as a .pdf file) of all 86 dynamically nonequivalent networks admitting nondegenerate Andronov-Hopf bifurcation,
-* the .csv file of these 86 networks, and additionally the exceptional networks.
+* the .csv file of these 86 networks, with the exceptional networks in its 87th row.
