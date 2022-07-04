@@ -5,5 +5,5 @@ M. Banaji, B. Boros
 **The smallest bimolecular mass-action CRNs admitting Andronov-Hopf bifurcation**  
 
 Also added are:
-* the table (as a .pdf file) of all 86 dynamically nonequivalent networks admitting nondegenerate Andronov-Hopf bifurcation,
-* the .csv file of these 86 networks, with the exceptional networks in its 87th row.
+* the table (as a .pdf file) of all dynamically nonequivalent networks admitting nondegenerate Andronov-Hopf bifurcation,
+* the .csv file of these networks, with the exceptional networks in its last row.
