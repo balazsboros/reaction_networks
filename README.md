@@ -5,6 +5,7 @@ A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/
 ### /3species_4reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros  
 &nbsp;&nbsp;&nbsp;&nbsp;**The smallest bimolecular mass-action CRNs admitting Andronov-Hopf bifurcation**  
+&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/abs/2207.04971
 
 ### /add_dependent_species
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
