@@ -3,5 +3,5 @@ a MATLAB code (.m file, along with 3x2=6 files with the ODEs) that produces the 
 
 B. Boros, J. Hofbauer  
 **Limit cycles in mass-conserving deficiency-one mass-action systems**  
-*Submitted*, 2022  
-https://arxiv.org/pdf/2202.10406.pdf
+*Electronic Journal of Qualitative Theory of Differential Equations*, 2022(42):1-18, 2022  
+http://www.math.u-szeged.hu/ejqtde/p9812.pdf
