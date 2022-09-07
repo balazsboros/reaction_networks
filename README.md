@@ -19,6 +19,12 @@ A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/
 &nbsp;&nbsp;&nbsp;&nbsp;*Journal of Dynamics and Differential Equations*, 2021  
 &nbsp;&nbsp;&nbsp;&nbsp;https://link.springer.com/content/pdf/10.1007/s10884-021-10051-z.pdf
 
+### /feinberg_berner_wilhelm_heinrich
+&nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
+&nbsp;&nbsp;&nbsp;&nbsp;**Some minimal bimoleculat mass-action systems with limit cycles**  
+&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2022  
+&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2202.11034.pdf
+
 ### /parallelograms
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Limit cycles in mass-conserving deficiency-one mass-action systems**  
