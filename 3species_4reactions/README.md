@@ -3,7 +3,7 @@ nondegeneracy of the Andronov-Hopf bifurcations in the paper
 
 M. Banaji, B. Boros  
 **The smallest bimolecular mass-action reaction networks admitting Andronov-Hopf bifurcation**  
-*Submitted*, 2022
+*Submitted*, 2022  
 https://arxiv.org/pdf/2207.04971.pdf
 
 Also added are:
