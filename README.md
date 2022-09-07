@@ -22,7 +22,7 @@ A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/
 
 ### /feinberg_berner_wilhelm_heinrich
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
-&nbsp;&nbsp;&nbsp;&nbsp;**Some minimal bimoleculat mass-action systems with limit cycles**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Some minimal bimolecular mass-action systems with limit cycles**  
 &nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2022  
 &nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2202.11034.pdf
 
