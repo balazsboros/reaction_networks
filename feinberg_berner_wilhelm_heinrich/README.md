@@ -2,5 +2,5 @@ A Mathematica notebook (.nb file, also saved as a .pdf file) containing the calc
 
 B. Boros, J. Hofbauer  
 **Some minimal bimolecular mass-action systems with limit cycles**  
-*Submitted*, 2022  
-https://arxiv.org/pdf/2202.11034.pdf
+*Nonlinear Analysis: Real World Applications*, 72:103839, 2023  
+https://www.sciencedirect.com/science/article/pii/S1468121823000093/pdf
