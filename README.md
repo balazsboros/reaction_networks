@@ -1,6 +1,6 @@
 Supplementary materials to some of my papers on chemical reaction networks.  
 Mainly Mathematica and MATLAB codes. Mathematica notebooks (.nb files) are also saved as a .pdf file.  
-A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/.
+A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/ (temporarily unavailable, sorry).  
 
 ### /3species_4reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros  
@@ -23,7 +23,7 @@ A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/
 ### /feinberg_berner_wilhelm_heinrich
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Some minimal bimolecular mass-action systems with limit cycles**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Nonlinear Analysis: Real World Applications*, 72:103839, 2023
+&nbsp;&nbsp;&nbsp;&nbsp;*Nonlinear Analysis: Real World Applications*, 72:103839, 2023  
 &nbsp;&nbsp;&nbsp;&nbsp;https://www.sciencedirect.com/science/article/pii/S1468121823000093/pdf
 
 ### /parallelograms
