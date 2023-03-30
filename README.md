@@ -2,6 +2,11 @@ Supplementary materials to some of my papers on chemical reaction networks.
 Mainly Mathematica and MATLAB codes. Mathematica notebooks (.nb files) are also saved as a .pdf file.  
 A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/ (temporarily unavailable, sorry).  
 
+### /3reactions
+&nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
+&nbsp;&nbsp;&nbsp;&nbsp;**Oscillations in three-reaction quadratic mass-action systems**  
+&nbsp;&nbsp;&nbsp;&nbsp;*Coming soon*, 2023  
+
 ### /3species_4reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros  
 &nbsp;&nbsp;&nbsp;&nbsp;**The smallest bimolecular mass-action reaction networks admitting Andronov-Hopf bifurcation**  
