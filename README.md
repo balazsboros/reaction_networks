@@ -5,8 +5,8 @@ A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/
 ### /3species_4reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros  
 &nbsp;&nbsp;&nbsp;&nbsp;**The smallest bimolecular mass-action reaction networks admitting Andronov-Hopf bifurcation**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2022  
-&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/abs/2207.04971
+&nbsp;&nbsp;&nbsp;&nbsp;*Nonlinearity*, 36(2):1398-1433, 2022  
+&nbsp;&nbsp;&nbsp;&nbsp;https://iopscience.iop.org/article/10.1088/1361-6544/acb0a8/pdf
 
 ### /add_dependent_species
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
@@ -23,8 +23,8 @@ A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/
 ### /feinberg_berner_wilhelm_heinrich
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Some minimal bimolecular mass-action systems with limit cycles**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2022  
-&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2202.11034.pdf
+&nbsp;&nbsp;&nbsp;&nbsp;*Nonlinear Analysis: Real World Applications*, 72:103839, 2023
+&nbsp;&nbsp;&nbsp;&nbsp;https://www.sciencedirect.com/science/article/pii/S1468121823000093/pdf
 
 ### /parallelograms
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
