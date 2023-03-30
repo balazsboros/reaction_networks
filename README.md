@@ -10,7 +10,7 @@ A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/
 ### /3species_4reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros  
 &nbsp;&nbsp;&nbsp;&nbsp;**The smallest bimolecular mass-action reaction networks admitting Andronov-Hopf bifurcation**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Nonlinearity*, 36(2):1398-1433, 2022  
+&nbsp;&nbsp;&nbsp;&nbsp;*Nonlinearity*, 36(2):1398-1433, 2023  
 &nbsp;&nbsp;&nbsp;&nbsp;https://iopscience.iop.org/article/10.1088/1361-6544/acb0a8/pdf
 
 ### /add_dependent_species
