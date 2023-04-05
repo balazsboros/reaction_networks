@@ -5,7 +5,7 @@ A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/
 ### /3reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Oscillations in three-reaction quadratic mass-action systems**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Coming soon*, 2023  
+&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2023  
 
 ### /3species_4reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros  
