@@ -1,0 +1,2749 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    103267,       2741]
+NotebookOptionsPosition[     96859,       2617]
+NotebookOutlinePosition[     97337,       2635]
+CellTagsIndexPosition[     97294,       2632]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Oscillations in three-reaction quadratic mass-action systems", "Title",
+ CellChangeTimes->{{3.8890102694706335`*^9, 
+  3.889010288296102*^9}},ExpressionUUID->"bd38881f-37ab-4da5-8c1a-\
+90b058fdc73f"],
+
+Cell[TextData[{
+ "Murad ",
+ Cell[BoxData[
+  FormBox["Banaji", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1d4aca30-2ae7-4356-af5e-167b304758c4"],
+ ", Bal\[AAcute]zs Boros, Josef Hofbauer"
+}], "Author",
+ CellChangeTimes->{{3.889009995727419*^9, 3.8890100258232613`*^9}, {
+  3.8890117584653015`*^9, 
+  3.8890117690963964`*^9}},ExpressionUUID->"b0a3d70e-51d6-47f5-acc1-\
+c1239d8600b1"],
+
+Cell["\<\
+This document contains the computations of the first focal values in Sections \
+4.4 and 4.5 in the paper titled  \[OpenCurlyDoubleQuote]Oscillations in \
+three-reaction quadratic mass-action systems\[CloseCurlyDoubleQuote].
+In all cases, the first focal value turns out to be negative, and hence, all \
+the occurring Andronov-Hopf bifurcations are supercritical, leading to stable \
+limit cycles.\
+\>", "Abstract",
+ CellChangeTimes->{{3.8890103199258423`*^9, 3.889010371871828*^9}, {
+  3.8890104394179783`*^9, 3.889010569600179*^9}, {3.8890118474327993`*^9, 
+  3.889011850299181*^9}, {3.8890129881137276`*^9, 
+  3.8890130115986743`*^9}},ExpressionUUID->"e910b20b-cd37-4cd5-b4f9-\
+d63b9707500b"],
+
+Cell[CellGroupData[{
+
+Cell["0 The first focal value", "Section",
+ CellChangeTimes->{{3.889010710450902*^9, 
+  3.8890107344737053`*^9}},ExpressionUUID->"4faec200-9809-43ce-af05-\
+4ee8c328e310"],
+
+Cell[CellGroupData[{
+
+Cell["Theory", "Subsection",
+ CellChangeTimes->{{3.8890121002240973`*^9, 
+  3.8890121075291243`*^9}},ExpressionUUID->"c4c65ef8-15bb-490d-aca8-\
+b8e9594126fc"],
+
+Cell[TextData[{
+ "The first focal value for the differential equation\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         OverscriptBox[
+          StyleBox["x", "TI"], "."], "\[LongEqual]", "-", "\[Omega]", 
+         StyleBox["y", "TI"], "+", 
+         UnderscriptBox["\[Sum]", 
+          RowBox[{
+            StyleBox["i", "TI"], "+", 
+            StyleBox["j", "TI"], "\[GreaterEqual]", "2"}], LimitsPositioning -> 
+          True], 
+         FractionBox[
+          SubscriptBox[
+           StyleBox["F", "TI"], 
+           RowBox[{
+             StyleBox["i", "TI"], 
+             StyleBox["j", "TI"]}]], 
+          RowBox[{
+            StyleBox["i", "TI"], "!", 
+            StyleBox["j", "TI"], "!"}]], 
+         SuperscriptBox[
+          StyleBox["x", "TI"], 
+          StyleBox["i", "TI"]], 
+         SuperscriptBox[
+          StyleBox["y", "TI"], 
+          StyleBox["j", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\dot{x}=-\\omega y+\\sum_{i+j\\geq2}\\frac{F_{ij}}{i!j!}x^iy^j", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "361c7c39-6ad7-41c3-ba6d-41fe93afb399"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         OverscriptBox[
+          StyleBox["y", "TI"], "."], "\[LongEqual]", "\[Omega]", 
+         StyleBox["x", "TI"], "+", 
+         UnderscriptBox["\[Sum]", 
+          RowBox[{
+            StyleBox["i", "TI"], "+", 
+            StyleBox["j", "TI"], "\[GreaterEqual]", "2"}], LimitsPositioning -> 
+          True], 
+         FractionBox[
+          SubscriptBox[
+           StyleBox["G", "TI"], 
+           RowBox[{
+             StyleBox["i", "TI"], 
+             StyleBox["j", "TI"]}]], 
+          RowBox[{
+            StyleBox["i", "TI"], "!", 
+            StyleBox["j", "TI"], "!"}]], 
+         SuperscriptBox[
+          StyleBox["x", "TI"], 
+          StyleBox["i", "TI"]], 
+         SuperscriptBox[
+          StyleBox["y", "TI"], 
+          StyleBox["j", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\dot{y}=\\omega x+\\sum_{i+j\\geq2}\\frac{G_{ij}}{i!j!}x^iy^j", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "02302e60-a4b4-4a54-b781-49bf597112bd"],
+ "\nis given by\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["L", "TI"], "1"], "\[LongEqual]", 
+         SubscriptBox[
+          StyleBox["F", "TI"], "30"], "+", 
+         SubscriptBox[
+          StyleBox["F", "TI"], "12"], "+", 
+         SubscriptBox[
+          StyleBox["G", "TI"], "03"], "+", 
+         SubscriptBox[
+          StyleBox["G", "TI"], "21"], "+", 
+         FractionBox["1", "\[Omega]"], 
+         RowBox[{"[", 
+           RowBox[{
+             SubscriptBox[
+              StyleBox["F", "TI"], "11"], 
+             RowBox[{"(", 
+               RowBox[{
+                 SubscriptBox[
+                  StyleBox["F", "TI"], "20"], "+", 
+                 SubscriptBox[
+                  StyleBox["F", "TI"], "02"]}], ")"}], "-", 
+             SubscriptBox[
+              StyleBox["G", "TI"], "11"], 
+             RowBox[{"(", 
+               RowBox[{
+                 SubscriptBox[
+                  StyleBox["G", "TI"], "20"], "+", 
+                 SubscriptBox[
+                  StyleBox["G", "TI"], "02"]}], ")"}], "+", 
+             SubscriptBox[
+              StyleBox["F", "TI"], "02"], 
+             SubscriptBox[
+              StyleBox["G", "TI"], "02"], "-", 
+             SubscriptBox[
+              StyleBox["F", "TI"], "20"], 
+             SubscriptBox[
+              StyleBox["G", "TI"], "20"]}], "]"}]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "L_1 = F_{30}+F_{12}+G_{03}+G_{21}+\\frac{1}{\\omega}[F_{11}(F_{20}+F_{\
+02})-G_{11}(G_{20}+G_{02})+F_{02}G_{02}-F_{20}G_{20}]", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "9a24065b-a26b-457f-91a4-3ab092144bfe"],
+ ", see e.g. http://www.scholarpedia.org/article/Andronov-Hopf_bifurcation."
+}], "Text",
+ CellChangeTimes->{{3.8884715703605022`*^9, 3.888471583250484*^9}, {
+   3.8884716647734756`*^9, 3.8884717003467255`*^9}, {3.8884731768189936`*^9, 
+   3.8884731857603855`*^9}, {3.888473241334603*^9, 3.8884732761314163`*^9}, 
+   3.8884733952803683`*^9, {3.888473436872772*^9, 3.8884734449443526`*^9}, {
+   3.8890112431911063`*^9, 3.8890112450822926`*^9}, {3.8892574070043535`*^9, 
+   3.889257458325598*^9}},ExpressionUUID->"75539ac0-1ac6-40dd-a1a1-\
+7c109f3a9e66"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Practice", "Subsection",
+ CellChangeTimes->{{3.889012143488796*^9, 
+  3.889012145023591*^9}},ExpressionUUID->"421fc257-2c5a-41f4-8678-\
+1d799d535048"],
+
+Cell[TextData[{
+ "The function ",
+ StyleBox["GetDerivatives", "Code"],
+ " brings the ODE to canonical form, and computes the necessary derivatives."
+}], "Text",
+ CellChangeTimes->{{3.8890122013932734`*^9, 3.8890122668873615`*^9}, {
+  3.8891796975288053`*^9, 
+  3.889179698000077*^9}},ExpressionUUID->"7e085f88-fe22-4116-bb11-\
+c1ce9d8ca84e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"GetDerivatives", "[", 
+    RowBox[{"fg_", ",", "equilibrium_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "J", ",", "xyshift", ",", "T", ",", "Tinvuv", ",", "FG", ",", 
+       "derivatives", ",", "a", ",", "b", ",", "u", ",", "v", ",", "i", ",", 
+       "j"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"J", "=", 
+       RowBox[{"Simplify", "[", 
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{"fg", ",", 
+           RowBox[{"{", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}], "/.", 
+         "equilibrium"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"xyshift", " ", "=", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "\[Rule]", 
+          RowBox[{"x", "+", 
+           RowBox[{"(", 
+            RowBox[{"x", "/.", "equilibrium"}], ")"}]}]}], ",", " ", 
+         RowBox[{"y", "\[Rule]", 
+          RowBox[{"y", "+", 
+           RowBox[{"(", 
+            RowBox[{"y", "/.", "equilibrium"}], ")"}]}]}]}], "}"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"T", " ", "=", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "a"}], "/", "\[Omega]"}], ",", 
+           RowBox[{
+            RowBox[{"-", "b"}], "/", "\[Omega]"}]}], "}"}]}], "}"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Tinvuv", " ", "=", " ", 
+       RowBox[{
+        RowBox[{"Inverse", "[", "T", "]"}], ".", 
+        RowBox[{"{", 
+         RowBox[{"u", ",", "v"}], "}"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"FG", " ", "=", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"T", " ", ".", " ", "fg"}], "/.", "xyshift"}], ")"}], " ", 
+         "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "\[Rule]", 
+            RowBox[{"Tinvuv", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+           RowBox[{"y", "\[Rule]", 
+            RowBox[{"Tinvuv", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], "/.", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"a", "\[Rule]", 
+           RowBox[{"J", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
+          RowBox[{"b", "\[Rule]", " ", 
+           RowBox[{"J", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}], "}"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"derivatives", "=", 
+       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", "=", "0"}], ",", " ", 
+        RowBox[{"i", "\[LessEqual]", "3"}], ",", " ", 
+        RowBox[{"i", "++"}], ",", " ", 
+        RowBox[{"For", "[", 
+         RowBox[{
+          RowBox[{"j", "=", "0"}], ",", " ", 
+          RowBox[{"j", "\[LessEqual]", 
+           RowBox[{"3", "-", "i"}]}], ",", " ", 
+          RowBox[{"j", "++"}], ",", " ", "\[IndentingNewLine]", 
+          RowBox[{"derivatives", " ", "=", " ", 
+           RowBox[{"Join", "[", 
+            RowBox[{"derivatives", ",", " ", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                SubscriptBox["F", 
+                 RowBox[{"i", ",", "j"}]], "\[Rule]", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"D", "[", 
+                   RowBox[{
+                    RowBox[{"FG", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"u", ",", "i"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"v", ",", "j"}], "}"}]}], "]"}], "/.", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"u", "\[Rule]", "0"}], ",", 
+                    RowBox[{"v", "\[Rule]", "0"}]}], "}"}]}], ")"}]}], ",", 
+               " ", 
+               RowBox[{
+                SubscriptBox["G", 
+                 RowBox[{"i", ",", "j"}]], "\[Rule]", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"D", "[", 
+                   RowBox[{
+                    RowBox[{"FG", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"u", ",", "i"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"v", ",", "j"}], "}"}]}], "]"}], "/.", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"u", "\[Rule]", "0"}], ",", 
+                    RowBox[{"v", "\[Rule]", "0"}]}], "}"}]}], ")"}]}]}], 
+              "}"}]}], "]"}]}]}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      "derivatives"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.88381117224821*^9, 3.883811183317913*^9}, {
+   3.8838206959205647`*^9, 3.8838206993829994`*^9}, {3.883821191515775*^9, 
+   3.8838211992443542`*^9}, {3.8838213470429654`*^9, 
+   3.8838213479169097`*^9}, {3.8884711469638777`*^9, 
+   3.8884711567271986`*^9}, {3.889021836352309*^9, 3.889021854406106*^9}, {
+   3.8890233622037406`*^9, 3.889023372269683*^9}, {3.8890234976118402`*^9, 
+   3.8890235026534863`*^9}, {3.8890237895169373`*^9, 
+   3.8890238011792192`*^9}, {3.8890238882096395`*^9, 3.889023915567913*^9}, {
+   3.889024057742446*^9, 3.8890240667143717`*^9}, 3.8890243324864407`*^9},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[1]:=",ExpressionUUID->"e3df8a95-485f-42b1-9df5-cb7905458387"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox["L", "1"], "=", 
+   RowBox[{
+    SubscriptBox["F", 
+     RowBox[{"3", ",", "0"}]], "+", 
+    SubscriptBox["F", 
+     RowBox[{"1", ",", "2"}]], "+", 
+    SubscriptBox["G", 
+     RowBox[{"0", ",", "3"}]], "+", 
+    SubscriptBox["G", 
+     RowBox[{"2", ",", "1"}]], "+", 
+    RowBox[{
+     FractionBox["1", "\[Omega]"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["F", 
+         RowBox[{"1", ",", "1"}]], 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["F", 
+           RowBox[{"2", ",", "0"}]], "+", 
+          SubscriptBox["F", 
+           RowBox[{"0", ",", "2"}]]}], ")"}]}], "-", 
+       RowBox[{
+        SubscriptBox["G", 
+         RowBox[{"1", ",", "1"}]], 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["G", 
+           RowBox[{"2", ",", "0"}]], "+", 
+          SubscriptBox["G", 
+           RowBox[{"0", ",", "2"}]]}], ")"}]}], "+", 
+       RowBox[{
+        SubscriptBox["F", 
+         RowBox[{"0", ",", "2"}]], 
+        SubscriptBox["G", 
+         RowBox[{"0", ",", "2"}]]}], "-", 
+       RowBox[{
+        SubscriptBox["F", 
+         RowBox[{"2", ",", "0"}]], 
+        SubscriptBox["G", 
+         RowBox[{"2", ",", "0"}]]}]}], ")"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8884713565464077`*^9, 3.8884714805994596`*^9}, {
+  3.889021862849367*^9, 3.8890218992066045`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[2]:=",ExpressionUUID->"4b37dbc2-c0da-4dbe-888e-b95778dae504"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["4 The analysis of quadratic (2,3,2) systems", "Section",
+ CellChangeTimes->{{3.8890127260195456`*^9, 3.8890127261436434`*^9}, {
+  3.889012770715313*^9, 
+  3.889012798955677*^9}},ExpressionUUID->"fdbb0d59-9097-4b42-8cb8-\
+62c3cee09196"],
+
+Cell[CellGroupData[{
+
+Cell["4.4 Discussion on Theorem 7", "Subsection",
+ CellChangeTimes->{{3.889012801084277*^9, 
+  3.889012824148763*^9}},ExpressionUUID->"b9826fc4-01fd-4cc7-a630-\
+a433190b42ef"],
+
+Cell[CellGroupData[{
+
+Cell["Network on the left (four reactions)", "Subsubsection",
+ CellChangeTimes->{{3.88901329674751*^9, 3.889013326900896*^9}, {
+  3.8890135613469615`*^9, 
+  3.8890135693343887`*^9}},ExpressionUUID->"6defa764-3d6c-4194-9269-\
+f84812437d67"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fg", "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Kappa]", "1"], 
+     SuperscriptBox["x", "2"], 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}]}], "+", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "2"], "x", " ", "y", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "+", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "3"], "y", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "1"}]}], "}"}]}], "+", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "4"], "y", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", 
+       RowBox[{"-", "1"}]}], "}"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"equil", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"fg", "==", "0"}], "&&", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["\[Kappa]", "1"], ",", 
+          SubscriptBox["\[Kappa]", "2"], ",", 
+          SubscriptBox["\[Kappa]", "3"], ",", 
+          SubscriptBox["\[Kappa]", "4"]}], "}"}], ">", "0"}], "&&", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}], ">", "0"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<positive equilibrium: \>\"", ",", "equil"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.8890130255876403`*^9, 3.8890131904848146`*^9}, {
+  3.8890139286172123`*^9, 3.8890139571158047`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[3]:=",ExpressionUUID->"210df014-ff58-4259-b9f9-43952db6ea50"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"positive equilibrium: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", 
+       TemplateBox[{
+         FractionBox[
+          RowBox[{
+            SubscriptBox["\[Kappa]", "3"], "+", 
+            SubscriptBox["\[Kappa]", "4"]}], 
+          SubscriptBox["\[Kappa]", "2"]], 
+         RowBox[{
+           RowBox[{
+             SubscriptBox["\[Kappa]", "3"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "4"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "1"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "2"], ">", "0"}]}]},
+        "ConditionalExpression"]}], ",", 
+      RowBox[{"y", "\[Rule]", 
+       TemplateBox[{
+         FractionBox[
+          RowBox[{
+            SubscriptBox["\[Kappa]", "1"], " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+               RowBox[{
+                 SubscriptBox["\[Kappa]", "3"], "+", 
+                 SubscriptBox["\[Kappa]", "4"]}], ")"}], "2"]}], 
+          RowBox[{
+            SubsuperscriptBox["\[Kappa]", "2", "2"], " ", 
+            SubscriptBox["\[Kappa]", "3"]}]], 
+         RowBox[{
+           RowBox[{
+             SubscriptBox["\[Kappa]", "3"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "4"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "1"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "2"], ">", "0"}]}]},
+        "ConditionalExpression"]}]}], "}"}], "}"}]}],
+  SequenceForm[
+  "positive equilibrium: ", {{$CellContext`x -> 
+     ConditionalExpression[
+      Subscript[$CellContext`\[Kappa], 2]^(-1) (
+        Subscript[$CellContext`\[Kappa], 3] + 
+        Subscript[$CellContext`\[Kappa], 4]), 
+       And[
+       Subscript[$CellContext`\[Kappa], 3] > 0, 
+        Subscript[$CellContext`\[Kappa], 4] > 0, 
+        Subscript[$CellContext`\[Kappa], 1] > 0, 
+        Subscript[$CellContext`\[Kappa], 2] > 0]], $CellContext`y -> 
+     ConditionalExpression[
+      Subscript[$CellContext`\[Kappa], 1] 
+       Subscript[$CellContext`\[Kappa], 2]^(-2) 
+       Subscript[$CellContext`\[Kappa], 3]^(-1) (
+         Subscript[$CellContext`\[Kappa], 3] + 
+         Subscript[$CellContext`\[Kappa], 4])^2, 
+       And[
+       Subscript[$CellContext`\[Kappa], 3] > 0, 
+        Subscript[$CellContext`\[Kappa], 4] > 0, 
+        Subscript[$CellContext`\[Kappa], 1] > 0, 
+        Subscript[$CellContext`\[Kappa], 2] > 0]]}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8890139441231356`*^9, 3.8890139582402587`*^9}, 
+   3.889021936976617*^9, 3.8890235148253355`*^9, 3.889024018658473*^9, 
+   3.8890240721237307`*^9, 3.889024451335228*^9, 3.8890251106240253`*^9, 
+   3.8892574839917955`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"86a733c8-b1d1-446b-afdc-c13608540c8f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"equilibrium", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{"equil", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "=", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{"fg", ",", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}], "/.", 
+    "equilibrium"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"trJ", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Tr", "[", "J", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"detJ", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Det", "[", "J", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hopf", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{"trJ", "==", "0"}], "&&", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["\[Kappa]", "1"], ",", 
+          SubscriptBox["\[Kappa]", "2"], ",", 
+          SubscriptBox["\[Kappa]", "3"], ",", 
+          SubscriptBox["\[Kappa]", "4"]}], "}"}], ">", "0"}]}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"derivatives", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"GetDerivatives", "[", 
+      RowBox[{"fg", ",", "equilibrium"}], "]"}], "/.", "hopf"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L1", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     SubscriptBox["L", "1"], "/.", "derivatives"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{\"det\", 
+StyleBox[\"J\", \"TI\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> \
+{}, \"input\" -> \"\\\\det J =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \>\"", ",", "detJ"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+StyleBox[\"tr\", FontSlant -> \"Plain\"], 
+StyleBox[\"J\", \"TI\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> \
+{}, \"input\" -> \"\\\\mathrm{tr}J =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \>\"", ",", "trJ"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+SubscriptBox[
+StyleBox[\"L\", \"TI\"], \"1\"], \"\[LongEqual]\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"L_1 =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \>\"", ",", "L1"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.889013236966663*^9, 3.8890132662318087`*^9}, {
+   3.8890134526451597`*^9, 3.889013511627231*^9}, {3.889013575789248*^9, 
+   3.8890136261585383`*^9}, {3.8890137008541155`*^9, 3.88901381997969*^9}, {
+   3.88901387790701*^9, 3.889013919637566*^9}, {3.889014072683475*^9, 
+   3.889014127919365*^9}, {3.889014159919549*^9, 3.889014162592207*^9}, 
+   3.8890240987045755`*^9, 3.889024455683182*^9},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[6]:=",ExpressionUUID->"93918395-75e6-4631-b8a3-d35f5f95049d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{\\\"det\\\", StyleBox[\\\"J\\\", \\\"TI\\\"], \
+\\\"\[LongEqual]\\\"}], TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" \
+-> \\\"\\\\\\\\det J =\\\", \\\"state\\\" -> \
+\\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)  \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Kappa]", "1"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["\[Kappa]", "3"], "+", 
+        SubscriptBox["\[Kappa]", "4"]}], ")"}], "2"]}], 
+    SubscriptBox["\[Kappa]", "2"]]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{\"det\", StyleBox[\"J\", \
+\"TI\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> {}, \"input\" -> \
+\"\\\\det J =\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)  ", 
+   Subscript[$CellContext`\[Kappa], 1] 
+   Subscript[$CellContext`\[Kappa], 2]^(-1) (
+     Subscript[$CellContext`\[Kappa], 3] + 
+     Subscript[$CellContext`\[Kappa], 4])^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.8890138826820335`*^9, 3.88901392058916*^9, {3.8890140802532406`*^9, 
+   3.8890141061969814`*^9}, {3.889014150292981*^9, 3.889014163476468*^9}, 
+   3.8890219397098556`*^9, 3.8890235169557686`*^9, 3.8890240259931583`*^9, {
+   3.8890240743344145`*^9, 3.8890240991528807`*^9}, 3.8890244607783175`*^9, 
+   3.889025113968954*^9, 3.889257486497032*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"a6e9aca6-208f-4fad-a42b-214cd3305dbe"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{StyleBox[\\\"tr\\\", FontSlant -> \\\"Plain\\\"], StyleBox[\\\
+\"J\\\", \\\"TI\\\"], \\\"\[LongEqual]\\\"}], TraditionalForm], \
+\\\"errors\\\" -> {}, \\\"input\\\" -> \\\"\\\\\\\\mathrm{tr}J =\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)  \"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Kappa]", "1"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Kappa]", "3"], "-", 
+       SubscriptBox["\[Kappa]", "4"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Kappa]", "3"], "+", 
+       SubscriptBox["\[Kappa]", "4"]}], ")"}]}], 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "2"], " ", 
+     SubscriptBox["\[Kappa]", "3"]}]]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\"tr\", \
+FontSlant -> \"Plain\"], StyleBox[\"J\", \"TI\"], \"\[LongEqual]\"}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\mathrm{tr}J =\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)  ", 
+   Subscript[$CellContext`\[Kappa], 1] 
+   Subscript[$CellContext`\[Kappa], 2]^(-1) 
+   Subscript[$CellContext`\[Kappa], 3]^(-1) (
+    Subscript[$CellContext`\[Kappa], 3] - 
+    Subscript[$CellContext`\[Kappa], 4]) (Subscript[$CellContext`\[Kappa], 3] + 
+    Subscript[$CellContext`\[Kappa], 4])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.8890138826820335`*^9, 3.88901392058916*^9, {3.8890140802532406`*^9, 
+   3.8890141061969814`*^9}, {3.889014150292981*^9, 3.889014163476468*^9}, 
+   3.8890219397098556`*^9, 3.8890235169557686`*^9, 3.8890240259931583`*^9, {
+   3.8890240743344145`*^9, 3.8890240991528807`*^9}, 3.8890244607783175`*^9, 
+   3.889025113968954*^9, 3.889257486507454*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"c112b8e5-2b74-4f5e-94fe-22c842a1c178"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{SubscriptBox[StyleBox[\\\"L\\\", \\\"TI\\\"], \\\"1\\\"], \
+\\\"\[LongEqual]\\\"}], TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" \
+-> \\\"L_1 =\\\", \\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\
+\"]\\)  \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"2", " ", 
+      SubscriptBox["\[Kappa]", "1"], " ", 
+      SubscriptBox["\[Kappa]", "2"]}], 
+     SubscriptBox["\[Kappa]", "3"]]}]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{SubscriptBox[StyleBox[\"L\
+\", \"TI\"], \"1\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"L_1 =\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \
+", (-2) Subscript[$CellContext`\[Kappa], 1] 
+   Subscript[$CellContext`\[Kappa], 2]/Subscript[$CellContext`\[Kappa], 3]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.8890138826820335`*^9, 3.88901392058916*^9, {3.8890140802532406`*^9, 
+   3.8890141061969814`*^9}, {3.889014150292981*^9, 3.889014163476468*^9}, 
+   3.8890219397098556`*^9, 3.8890235169557686`*^9, 3.8890240259931583`*^9, {
+   3.8890240743344145`*^9, 3.8890240991528807`*^9}, 3.8890244607783175`*^9, 
+   3.889025113968954*^9, 3.889257486518724*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"17b0c850-c0a6-4ede-811e-0ce738026925"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Network in the middle (trimolecular source)", "Subsubsection",
+ CellChangeTimes->{{3.8890141803810244`*^9, 
+  3.8890142149456515`*^9}},ExpressionUUID->"5547c1ee-523e-45bf-a175-\
+ff32624056e5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fg", "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Kappa]", "1"], 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}]}], "+", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "2"], "x", " ", 
+     SuperscriptBox["y", "2"], 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "+", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "3"], "y", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "1"}]}], "}"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"equil", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"fg", "==", "0"}], "&&", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["\[Kappa]", "1"], ",", 
+          SubscriptBox["\[Kappa]", "2"], ",", 
+          SubscriptBox["\[Kappa]", "3"]}], "}"}], ">", "0"}], "&&", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}], ">", "0"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<positive equilibrium: \>\"", ",", "equil"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.889014387788746*^9, 3.8890144067953606`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[16]:=",ExpressionUUID->"b6fa9a7c-cf79-4efd-9854-f131f56c690b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"positive equilibrium: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", 
+       TemplateBox[{
+         FractionBox[
+          SubsuperscriptBox["\[Kappa]", "3", "2"], 
+          RowBox[{
+            SubscriptBox["\[Kappa]", "1"], " ", 
+            SubscriptBox["\[Kappa]", "2"]}]], 
+         RowBox[{
+           RowBox[{
+             SubscriptBox["\[Kappa]", "1"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "2"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "3"], ">", "0"}]}]},
+        "ConditionalExpression"]}], ",", 
+      RowBox[{"y", "\[Rule]", 
+       TemplateBox[{
+         FractionBox[
+          SubscriptBox["\[Kappa]", "1"], 
+          SubscriptBox["\[Kappa]", "3"]], 
+         RowBox[{
+           RowBox[{
+             SubscriptBox["\[Kappa]", "1"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "2"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "3"], ">", "0"}]}]},
+        "ConditionalExpression"]}]}], "}"}], "}"}]}],
+  SequenceForm[
+  "positive equilibrium: ", {{$CellContext`x -> 
+     ConditionalExpression[
+      Subscript[$CellContext`\[Kappa], 1]^(-1) 
+       Subscript[$CellContext`\[Kappa], 2]^(-1) 
+       Subscript[$CellContext`\[Kappa], 3]^2, 
+       And[
+       Subscript[$CellContext`\[Kappa], 1] > 0, 
+        Subscript[$CellContext`\[Kappa], 2] > 0, 
+        Subscript[$CellContext`\[Kappa], 3] > 0]], $CellContext`y -> 
+     ConditionalExpression[
+      Subscript[$CellContext`\[Kappa], 1]/Subscript[$CellContext`\[Kappa], 3], 
+       And[
+       Subscript[$CellContext`\[Kappa], 1] > 0, 
+        Subscript[$CellContext`\[Kappa], 2] > 0, 
+        Subscript[$CellContext`\[Kappa], 3] > 0]]}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.889014409528084*^9, 3.889021991074484*^9, 
+  3.8890224352697425`*^9, 3.8890224717387533`*^9, 3.8890225142653847`*^9, 
+  3.8890233889611425`*^9, 3.889023521486536*^9, 3.889023808037568*^9, 
+  3.8890239231113214`*^9, 3.889024251544142*^9, 3.8890248437059355`*^9, 
+  3.889025117831069*^9, 3.8892574900074368`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"c1b9e383-c40f-4b9b-b44c-6af4431fbaa7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"equilibrium", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{"equil", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "=", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{"fg", ",", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}], "/.", 
+    "equilibrium"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"trJ", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Tr", "[", "J", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"detJ", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Det", "[", "J", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hopf", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{"trJ", "==", "0"}], "&&", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["\[Kappa]", "1"], ",", 
+          SubscriptBox["\[Kappa]", "2"], ",", 
+          SubscriptBox["\[Kappa]", "3"]}], "}"}], ">", "0"}]}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Omega]subst", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"{", 
+     RowBox[{"\[Omega]", "->", 
+      SqrtBox[
+       RowBox[{"detJ", "/.", "hopf"}]]}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"derivatives", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"GetDerivatives", "[", 
+      RowBox[{"fg", ",", "equilibrium"}], "]"}], "/.", "hopf"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L1", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["L", "1"], "/.", "derivatives"}], "/.", "\[Omega]subst"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{\"det\", 
+StyleBox[\"J\", \"TI\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> \
+{}, \"input\" -> \"\\\\det J =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \>\"", ",", "detJ"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+StyleBox[\"tr\", FontSlant -> \"Plain\"], 
+StyleBox[\"J\", \"TI\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> \
+{}, \"input\" -> \"\\\\mathrm{tr}J =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \>\"", ",", "trJ"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+SubscriptBox[
+StyleBox[\"L\", \"TI\"], \"1\"], \"\[LongEqual]\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"L_1 =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \>\"", ",", "L1"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.8890144455916753`*^9, 3.8890146180844717`*^9}, {
+  3.88901469748744*^9, 3.8890147160153527`*^9}, {3.889024275448762*^9, 
+  3.88902431809597*^9}, {3.889024478362954*^9, 3.889024482989397*^9}, {
+  3.8890248374816103`*^9, 3.8890248732292757`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[19]:=",ExpressionUUID->"36c05203-3afd-410c-9ebc-f707644880d8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{\\\"det\\\", StyleBox[\\\"J\\\", \\\"TI\\\"], \
+\\\"\[LongEqual]\\\"}], TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" \
+-> \\\"\\\\\\\\det J =\\\", \\\"state\\\" -> \
+\\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)  \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{
+     SubsuperscriptBox["\[Kappa]", "1", "2"], " ", 
+     SubscriptBox["\[Kappa]", "2"]}], 
+    SubscriptBox["\[Kappa]", "3"]]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{\"det\", StyleBox[\"J\", \
+\"TI\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> {}, \"input\" -> \
+\"\\\\det J =\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)  ", 
+   Subscript[$CellContext`\[Kappa], 1]^2 Subscript[$CellContext`\[Kappa], 2]/
+   Subscript[$CellContext`\[Kappa], 3]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.889014448649675*^9, {3.8890145016653953`*^9, 3.889014618601023*^9}, {
+   3.889014698164816*^9, 3.889014717341288*^9}, 3.8890219934389715`*^9, 
+   3.889022437793044*^9, 3.8890224752856426`*^9, 3.8890225224903297`*^9, 
+   3.889023391449542*^9, 3.8890235252655535`*^9, 3.8890238103713117`*^9, 
+   3.8890239268686705`*^9, {3.889024255061678*^9, 3.8890243186033115`*^9}, 
+   3.8890244846403165`*^9, {3.889024839580134*^9, 3.889024873620696*^9}, 
+   3.889025120988236*^9, 3.889257492586082*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"39c7de45-9568-45da-8657-fa95d7f8b3cb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{StyleBox[\\\"tr\\\", FontSlant -> \\\"Plain\\\"], StyleBox[\\\
+\"J\\\", \\\"TI\\\"], \\\"\[LongEqual]\\\"}], TraditionalForm], \
+\\\"errors\\\" -> {}, \\\"input\\\" -> \\\"\\\\\\\\mathrm{tr}J =\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)  \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{
+       SubsuperscriptBox["\[Kappa]", "1", "2"], " ", 
+       SubscriptBox["\[Kappa]", "2"]}], 
+      SubsuperscriptBox["\[Kappa]", "3", "2"]]}], "+", 
+    SubscriptBox["\[Kappa]", "3"]}]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\"tr\", \
+FontSlant -> \"Plain\"], StyleBox[\"J\", \"TI\"], \"\[LongEqual]\"}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\mathrm{tr}J =\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)  ", -
+    Subscript[$CellContext`\[Kappa], 1]^2 Subscript[$CellContext`\[Kappa], 2] 
+    Subscript[$CellContext`\[Kappa], 3]^(-2) + 
+   Subscript[$CellContext`\[Kappa], 3]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.889014448649675*^9, {3.8890145016653953`*^9, 3.889014618601023*^9}, {
+   3.889014698164816*^9, 3.889014717341288*^9}, 3.8890219934389715`*^9, 
+   3.889022437793044*^9, 3.8890224752856426`*^9, 3.8890225224903297`*^9, 
+   3.889023391449542*^9, 3.8890235252655535`*^9, 3.8890238103713117`*^9, 
+   3.8890239268686705`*^9, {3.889024255061678*^9, 3.8890243186033115`*^9}, 
+   3.8890244846403165`*^9, {3.889024839580134*^9, 3.889024873620696*^9}, 
+   3.889025120988236*^9, 3.8892574925973787`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"a3610a96-f4b7-42ef-b5e4-3f0d250d7681"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{SubscriptBox[StyleBox[\\\"L\\\", \\\"TI\\\"], \\\"1\\\"], \
+\\\"\[LongEqual]\\\"}], TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" \
+-> \\\"L_1 =\\\", \\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\
+\"]\\)  \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     SubsuperscriptBox["\[Kappa]", "3", "3"], 
+     SubsuperscriptBox["\[Kappa]", "1", "2"]]}]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{SubscriptBox[StyleBox[\"L\
+\", \"TI\"], \"1\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"L_1 =\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \
+", -Subscript[$CellContext`\[Kappa], 1]^(-2) 
+   Subscript[$CellContext`\[Kappa], 3]^3],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.889014448649675*^9, {3.8890145016653953`*^9, 3.889014618601023*^9}, {
+   3.889014698164816*^9, 3.889014717341288*^9}, 3.8890219934389715`*^9, 
+   3.889022437793044*^9, 3.8890224752856426`*^9, 3.8890225224903297`*^9, 
+   3.889023391449542*^9, 3.8890235252655535`*^9, 3.8890238103713117`*^9, 
+   3.8890239268686705`*^9, {3.889024255061678*^9, 3.8890243186033115`*^9}, 
+   3.8890244846403165`*^9, {3.889024839580134*^9, 3.889024873620696*^9}, 
+   3.889025120988236*^9, 3.8892574926071386`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"c98968d4-0a74-4d8d-b458-0ecf53645510"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Network on the right (tetramolecular target)", "Subsubsection",
+ CellChangeTimes->{{3.8890142843651943`*^9, 
+  3.889014309071457*^9}},ExpressionUUID->"3b3cb6f1-87b8-4175-a0dc-\
+886409e99a08"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fg", "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Kappa]", "1"], 
+     SuperscriptBox["x", "2"], 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}]}], "+", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "2"], "x", " ", "y", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "+", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "3"], "y", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "1"}]}], "}"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"equil", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"fg", "==", "0"}], "&&", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["\[Kappa]", "1"], ",", 
+          SubscriptBox["\[Kappa]", "2"], ",", 
+          SubscriptBox["\[Kappa]", "3"]}], "}"}], ">", "0"}], "&&", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}], ">", "0"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<positive equilibrium: \>\"", ",", "equil"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.889024563427964*^9, 3.889024583153575*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[30]:=",ExpressionUUID->"3eedcdca-c030-49ac-9f5d-89592003afc7"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"positive equilibrium: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", 
+       TemplateBox[{
+         FractionBox[
+          SubscriptBox["\[Kappa]", "3"], 
+          SubscriptBox["\[Kappa]", "2"]], 
+         RowBox[{
+           RowBox[{
+             SubscriptBox["\[Kappa]", "1"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "2"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "3"], ">", "0"}]}]},
+        "ConditionalExpression"]}], ",", 
+      RowBox[{"y", "\[Rule]", 
+       TemplateBox[{
+         FractionBox[
+          RowBox[{
+            SubscriptBox["\[Kappa]", "1"], " ", 
+            SubscriptBox["\[Kappa]", "3"]}], 
+          SubsuperscriptBox["\[Kappa]", "2", "2"]], 
+         RowBox[{
+           RowBox[{
+             SubscriptBox["\[Kappa]", "1"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "2"], ">", "0"}], "&&", 
+           RowBox[{
+             SubscriptBox["\[Kappa]", "3"], ">", "0"}]}]},
+        "ConditionalExpression"]}]}], "}"}], "}"}]}],
+  SequenceForm[
+  "positive equilibrium: ", {{$CellContext`x -> 
+     ConditionalExpression[
+      Subscript[$CellContext`\[Kappa], 2]^(-1) 
+       Subscript[$CellContext`\[Kappa], 3], 
+       And[
+       Subscript[$CellContext`\[Kappa], 1] > 0, 
+        Subscript[$CellContext`\[Kappa], 2] > 0, 
+        Subscript[$CellContext`\[Kappa], 3] > 0]], $CellContext`y -> 
+     ConditionalExpression[
+      Subscript[$CellContext`\[Kappa], 1] 
+       Subscript[$CellContext`\[Kappa], 2]^(-2) 
+       Subscript[$CellContext`\[Kappa], 3], 
+       And[
+       Subscript[$CellContext`\[Kappa], 1] > 0, 
+        Subscript[$CellContext`\[Kappa], 2] > 0, 
+        Subscript[$CellContext`\[Kappa], 3] > 0]]}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8890245936158595`*^9, 3.8890251263131003`*^9, 
+  3.8892574958402824`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[30]:=",ExpressionUUID->"b5bcc278-e6a9-4261-97d7-0b437edf19c7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"equilibrium", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{"equil", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "=", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{"fg", ",", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}], "/.", 
+    "equilibrium"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"trJ", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Tr", "[", "J", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"detJ", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Det", "[", "J", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hopf", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{"trJ", "==", "0"}], "&&", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["\[Kappa]", "1"], ",", 
+          SubscriptBox["\[Kappa]", "2"], ",", 
+          SubscriptBox["\[Kappa]", "3"]}], "}"}], ">", "0"}]}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"derivatives", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"GetDerivatives", "[", 
+      RowBox[{"fg", ",", "equilibrium"}], "]"}], "/.", "hopf"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L1", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     SubscriptBox["L", "1"], "/.", "derivatives"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{\"det\", 
+StyleBox[\"J\", \"TI\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> \
+{}, \"input\" -> \"\\\\det J =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \>\"", ",", "detJ"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+StyleBox[\"tr\", FontSlant -> \"Plain\"], 
+StyleBox[\"J\", \"TI\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> \
+{}, \"input\" -> \"\\\\mathrm{tr}J =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \>\"", ",", "trJ"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+SubscriptBox[
+StyleBox[\"L\", \"TI\"], \"1\"], \"\[LongEqual]\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"L_1 =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \>\"", ",", "L1"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.889024658953458*^9, 3.889024713775011*^9}, {
+  3.889024816386518*^9, 3.8890248176839733`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[33]:=",ExpressionUUID->"80da2181-8610-460f-816d-a1e5d8b33aef"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{\\\"det\\\", StyleBox[\\\"J\\\", \\\"TI\\\"], \
+\\\"\[LongEqual]\\\"}], TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" \
+-> \\\"\\\\\\\\det J =\\\", \\\"state\\\" -> \
+\\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)  \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{
+     SubscriptBox["\[Kappa]", "1"], " ", 
+     SubsuperscriptBox["\[Kappa]", "3", "2"]}], 
+    SubscriptBox["\[Kappa]", "2"]]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{\"det\", StyleBox[\"J\", \
+\"TI\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> {}, \"input\" -> \
+\"\\\\det J =\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)  ", 
+   Subscript[$CellContext`\[Kappa], 1] 
+   Subscript[$CellContext`\[Kappa], 2]^(-1) 
+   Subscript[$CellContext`\[Kappa], 3]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8890247106727057`*^9, 3.8890247190393114`*^9}, 
+   3.8890248183341274`*^9, 3.88902512867879*^9, 3.8892574987248063`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[33]:=",ExpressionUUID->"27bca638-0b78-431e-bac9-a25740b9b135"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{StyleBox[\\\"tr\\\", FontSlant -> \\\"Plain\\\"], StyleBox[\\\
+\"J\\\", \\\"TI\\\"], \\\"\[LongEqual]\\\"}], TraditionalForm], \
+\\\"errors\\\" -> {}, \\\"input\\\" -> \\\"\\\\\\\\mathrm{tr}J =\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)  \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      FractionBox[
+       SubscriptBox["\[Kappa]", "1"], 
+       SubscriptBox["\[Kappa]", "2"]]}], ")"}], " ", 
+    SubscriptBox["\[Kappa]", "3"]}]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\"tr\", \
+FontSlant -> \"Plain\"], StyleBox[\"J\", \"TI\"], \"\[LongEqual]\"}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\mathrm{tr}J =\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)  ", (-1 + 
+    Subscript[$CellContext`\[Kappa], 1]/Subscript[$CellContext`\[Kappa], 2]) 
+   Subscript[$CellContext`\[Kappa], 3]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8890247106727057`*^9, 3.8890247190393114`*^9}, 
+   3.8890248183341274`*^9, 3.88902512867879*^9, 3.8892574987376337`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[33]:=",ExpressionUUID->"d63f887f-eb11-4b8e-a126-1223d82ffc96"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{SubscriptBox[StyleBox[\\\"L\\\", \\\"TI\\\"], \\\"1\\\"], \
+\\\"\[LongEqual]\\\"}], TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" \
+-> \\\"L_1 =\\\", \\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\
+\"]\\)  \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"2", " ", 
+      SubsuperscriptBox["\[Kappa]", "2", "2"], " ", 
+      SubscriptBox["\[Kappa]", "3"]}], 
+     SuperscriptBox["\[Omega]", "2"]]}]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{SubscriptBox[StyleBox[\"L\
+\", \"TI\"], \"1\"], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"L_1 =\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)  \
+", (-2) $CellContext`\[Omega]^(-2) Subscript[$CellContext`\[Kappa], 2]^2 
+   Subscript[$CellContext`\[Kappa], 3]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8890247106727057`*^9, 3.8890247190393114`*^9}, 
+   3.8890248183341274`*^9, 3.88902512867879*^9, 3.889257498748293*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[33]:=",ExpressionUUID->"09254577-b5e5-4fbf-a1a2-3453c7c15784"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["4.5 Andronov-Hopf bifurcations", "Subsection",
+ CellChangeTimes->{{3.889012826576334*^9, 
+  3.8890128473588023`*^9}},ExpressionUUID->"4a05536e-72a1-45bd-9f71-\
+cbc4d1fa24bc"],
+
+Cell[CellGroupData[{
+
+Cell["Case 9", "Subsubsection",
+ CellChangeTimes->{{3.8891796518867903`*^9, 
+  3.8891796691781464`*^9}},ExpressionUUID->"2853b864-cbf7-4e6d-be42-\
+f4e58b541e21"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Kappa]positive", "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Kappa]", "1"], ">", "0"}], "&&", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "2"], ">", "0"}], "&&", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "3"], ">", "0"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"absubst", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["a", "1"], "->", "2"}], ",", 
+     RowBox[{
+      SubscriptBox["b", "1"], "->", "0"}], ",", 
+     RowBox[{
+      SubscriptBox["a", "2"], "->", "1"}], ",", 
+     RowBox[{
+      SubscriptBox["b", "2"], "->", "1"}], ",", 
+     RowBox[{
+      SubscriptBox["a", "3"], "->", "0"}], ",", 
+     RowBox[{
+      SubscriptBox["b", "3"], "->", "1"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fg", "=", 
+   RowBox[{
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["\[Kappa]", "i"], 
+       SuperscriptBox["x", 
+        SubscriptBox["a", "i"]], 
+       SuperscriptBox["y", 
+        SubscriptBox["b", "i"]], 
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox["c", "i"], ",", 
+         SubscriptBox["d", "i"]}], "}"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}], "/.", "absubst"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"xy\[Mu]", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[Mu]", 
+         RowBox[{"{", 
+          RowBox[{
+           SubscriptBox["u", "1"], ",", 
+           SubscriptBox["u", "2"], ",", 
+           SubscriptBox["u", "3"]}], "}"}]}], "==", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["\[Kappa]", "1"], 
+             SuperscriptBox["x", 
+              SubscriptBox["a", "1"]], 
+             SuperscriptBox["y", 
+              SubscriptBox["b", "1"]]}], ",", 
+            RowBox[{
+             SubscriptBox["\[Kappa]", "2"], 
+             SuperscriptBox["x", 
+              SubscriptBox["a", "2"]], 
+             SuperscriptBox["y", 
+              SubscriptBox["b", "2"]]}], ",", 
+            RowBox[{
+             SubscriptBox["\[Kappa]", "3"], 
+             SuperscriptBox["x", 
+              SubscriptBox["a", "3"]], 
+             SuperscriptBox["y", 
+              SubscriptBox["b", "3"]]}]}], "}"}], "/.", "absubst"}], ")"}]}], 
+       "&&", "\[Kappa]positive", "&&", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}], ">", "0"}]}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<positive equilibrium and \[Mu]: \>\"", ",", "xy\[Mu]"}], 
+   "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"cross", "=", 
+   RowBox[{"Cross", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       SubscriptBox["c", "1"], ",", 
+       SubscriptBox["c", "2"], ",", 
+       SubscriptBox["c", "3"]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       SubscriptBox["d", "1"], ",", 
+       SubscriptBox["d", "2"], ",", 
+       SubscriptBox["d", "3"]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"usubst", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["u", "1"], "->", 
+      RowBox[{"cross", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+     RowBox[{
+      SubscriptBox["u", "2"], "->", 
+      RowBox[{"cross", "[", 
+       RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+     RowBox[{
+      SubscriptBox["u", "3"], "->", 
+      RowBox[{"cross", "[", 
+       RowBox[{"[", "3", "]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.88392215917194*^9, 3.8839222087976556`*^9}, {
+   3.8839234166729317`*^9, 3.8839234439161034`*^9}, {3.883923638936643*^9, 
+   3.8839236744391937`*^9}, {3.8839237116475153`*^9, 3.883923806584239*^9}, {
+   3.8839239774142942`*^9, 3.8839240024011145`*^9}, {3.883924079870929*^9, 
+   3.883924105847328*^9}, {3.8839241977898192`*^9, 3.883924200213234*^9}, {
+   3.8839242393742*^9, 3.8839242418528666`*^9}, {3.883924284564453*^9, 
+   3.8839243169375525`*^9}, {3.883924381552637*^9, 3.883924416969923*^9}, {
+   3.8839245666489167`*^9, 3.8839246044192553`*^9}, {3.8839247367341847`*^9, 
+   3.8839248038050957`*^9}, {3.8839248549499416`*^9, 
+   3.8839248726784925`*^9}, {3.883924916512683*^9, 3.8839251857956905`*^9}, {
+   3.8839253482168627`*^9, 3.8839253993223734`*^9}, 3.8839254673778925`*^9, {
+   3.8839255118731737`*^9, 3.8839255258088846`*^9}, 3.8839256595814047`*^9, {
+   3.883925764362383*^9, 3.8839258901833344`*^9}, {3.884067106327112*^9, 
+   3.8840671201709785`*^9}, 3.8840672982572756`*^9, 3.884068339348899*^9, {
+   3.8891807091230526`*^9, 3.8891807342915516`*^9}, {3.8891807740656023`*^9, 
+   3.889180798651612*^9}, {3.8891808309936543`*^9, 3.8891808786109667`*^9}, {
+   3.889181363603503*^9, 3.8891815467554564`*^9}, {3.8891815859749565`*^9, 
+   3.8891816939542336`*^9}, {3.8891817470285845`*^9, 3.889181841802515*^9}, {
+   3.8891818785614347`*^9, 3.88918192901458*^9}, {3.8891819741165314`*^9, 
+   3.889182222867281*^9}, {3.8891822929048605`*^9, 3.8891823099913783`*^9}, {
+   3.88918267104366*^9, 3.889182691310297*^9}, {3.889182932599885*^9, 
+   3.88918293940104*^9}, {3.8891831432413645`*^9, 3.8891832279576864`*^9}, 
+   3.889183274709269*^9, {3.8892519417320585`*^9, 3.889251982186663*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[43]:=",ExpressionUUID->"8b8d88fe-95a3-4017-a540-46afb949c017"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"positive equilibrium and \[Mu]: \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        SubscriptBox["u", "2"], " ", 
+        SubscriptBox["\[Kappa]", "3"]}], 
+       RowBox[{
+        SubscriptBox["u", "3"], " ", 
+        SubscriptBox["\[Kappa]", "2"]}]]}], ",", 
+     RowBox[{"y", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        SubsuperscriptBox["u", "2", "2"], " ", 
+        SubscriptBox["\[Kappa]", "1"], " ", 
+        SubscriptBox["\[Kappa]", "3"]}], 
+       RowBox[{
+        SubscriptBox["u", "1"], " ", 
+        SubscriptBox["u", "3"], " ", 
+        SubsuperscriptBox["\[Kappa]", "2", "2"]}]]}], ",", 
+     RowBox[{"\[Mu]", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        SubsuperscriptBox["u", "2", "2"], " ", 
+        SubscriptBox["\[Kappa]", "1"], " ", 
+        SubsuperscriptBox["\[Kappa]", "3", "2"]}], 
+       RowBox[{
+        SubscriptBox["u", "1"], " ", 
+        SubsuperscriptBox["u", "3", "2"], " ", 
+        SubsuperscriptBox["\[Kappa]", "2", "2"]}]]}]}], "}"}]}],
+  SequenceForm[
+  "positive equilibrium and \[Mu]: ", {$CellContext`x -> 
+    Subscript[$CellContext`u, 2] Subscript[$CellContext`u, 3]^(-1) 
+     Subscript[$CellContext`\[Kappa], 2]^(-1) 
+     Subscript[$CellContext`\[Kappa], 3], $CellContext`y -> 
+    Subscript[$CellContext`u, 1]^(-1) Subscript[$CellContext`u, 2]^2 
+     Subscript[$CellContext`u, 3]^(-1) Subscript[$CellContext`\[Kappa], 1] 
+     Subscript[$CellContext`\[Kappa], 2]^(-2) 
+     Subscript[$CellContext`\[Kappa], 3], $CellContext`\[Mu] -> 
+    Subscript[$CellContext`u, 1]^(-1) Subscript[$CellContext`u, 2]^2 
+     Subscript[$CellContext`u, 3]^(-2) Subscript[$CellContext`\[Kappa], 1] 
+     Subscript[$CellContext`\[Kappa], 2]^(-2) 
+     Subscript[$CellContext`\[Kappa], 3]^2}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.889251983785349*^9, 3.8892575034231696`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[43]:=",ExpressionUUID->"a2cce513-c595-476b-b3e0-4e82a1b245d3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"equilibrium", "=", 
+   RowBox[{"xy\[Mu]", "[", 
+    RowBox[{"[", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{"fg", ",", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}], "/.", 
+     "equilibrium"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"trJ", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Tr", "[", "J", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"detJ", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Det", "[", "J", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hopf", "=", 
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"trJ", "==", "0"}], ",", 
+      SubscriptBox["\[Kappa]", "1"]}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Omega]subst", "=", 
+   RowBox[{"{", 
+    RowBox[{"\[Omega]", "->", 
+     SqrtBox["detJ"]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"derivatives", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"GetDerivatives", "[", 
+     RowBox[{"fg", ",", "equilibrium"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L1", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Simplify", "[", 
+        RowBox[{
+         SubscriptBox["L", "1"], "/.", "derivatives"}], "]"}], "/.", 
+       "\[Omega]subst"}], "/.", "hopf"}], "/.", "usubst"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L1nonneg1", "=", 
+   RowBox[{"Reduce", "[", 
+    RowBox[{
+     RowBox[{"L1", ">=", "0"}], "&&", 
+     RowBox[{
+      SubscriptBox["c", "1"], ">", "0"}], "&&", 
+     RowBox[{
+      SubscriptBox["c", "2"], "==", 
+      RowBox[{"-", "1"}]}], "&&", 
+     RowBox[{
+      SubscriptBox["c", "3"], ">", "0"}], "&&", 
+     RowBox[{
+      SubscriptBox["d", "1"], ">", "0"}], "&&", 
+     RowBox[{
+      SubscriptBox["d", "2"], ">=", 
+      RowBox[{"-", "1"}]}], "&&", 
+     RowBox[{
+      SubscriptBox["d", "3"], ">=", 
+      RowBox[{"-", "1"}]}], "&&", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "2"], 
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          SubscriptBox["d", "3"], 
+          SubscriptBox["c", "3"]], "+", 
+         FractionBox[
+          SubscriptBox["d", "1"], 
+          SubscriptBox["c", "1"]]}], ")"}]}], "<", 
+      FractionBox[
+       SubscriptBox["d", "2"], 
+       SubscriptBox["c", "2"]], "<", 
+      FractionBox[
+       SubscriptBox["d", "1"], 
+       SubscriptBox["c", "1"]]}], "&&", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        SubscriptBox["\[Kappa]", "2"], ",", 
+        SubscriptBox["\[Kappa]", "3"]}], "}"}], ">", "0"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L1nonneg2", "=", 
+   RowBox[{"Reduce", "[", 
+    RowBox[{
+     RowBox[{"L1", ">=", "0"}], "&&", 
+     RowBox[{
+      SubscriptBox["c", "1"], ">", "0"}], "&&", 
+     RowBox[{
+      SubscriptBox["c", "2"], "==", 
+      RowBox[{"-", "1"}]}], "&&", 
+     RowBox[{
+      SubscriptBox["c", "3"], "==", "0"}], "&&", 
+     RowBox[{
+      SubscriptBox["d", "1"], ">", "0"}], "&&", 
+     RowBox[{
+      SubscriptBox["d", "2"], ">=", 
+      RowBox[{"-", "1"}]}], "&&", 
+     RowBox[{
+      SubscriptBox["d", "3"], "==", 
+      RowBox[{"-", "1"}]}], "&&", 
+     RowBox[{
+      FractionBox[
+       SubscriptBox["d", "2"], 
+       SubscriptBox["c", "2"]], "<", 
+      FractionBox[
+       SubscriptBox["d", "1"], 
+       SubscriptBox["c", "1"]]}], "&&", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        SubscriptBox["\[Kappa]", "2"], ",", 
+        SubscriptBox["\[Kappa]", "3"]}], "}"}], ">", "0"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+StyleBox[\"tr\", FontSlant -> \"Plain\"], 
+StyleBox[\"J\", \"TI\"], \"\[LongEqual]\", \"0\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"\\\\mathrm{tr}J=0\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\) for  \>\"", ",", "hopf"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SubscriptBox[
+StyleBox[\"L\", \"TI\"], \"1\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"L_1\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)=  \
+\>\"", ",", "L1"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+SubscriptBox[
+StyleBox[\"L\", \"TI\"], \"1\"], \"\[GreaterEqual]\", \"0\"}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"L_1\\\\geq0\", \"state\" \
+-> \"Boxes\"|>,\"TeXAssistantTemplate\"]\) when \!\(\*TemplateBox[<|\"boxes\" \
+-> FormBox[
+RowBox[{
+SubscriptBox[
+StyleBox[\"c\", \"TI\"], \"3\"], \">\", \"0\"}], TraditionalForm], \"errors\" \
+-> {}, \"input\" -> \"c_3>0\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\):  \>\"", ",", "L1nonneg1"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+SubscriptBox[
+StyleBox[\"L\", \"TI\"], \"1\"], \"\[GreaterEqual]\", \"0\"}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"L_1\\\\geq0\", \"state\" \
+-> \"Boxes\"|>,\"TeXAssistantTemplate\"]\) when \!\(\*TemplateBox[<|\"boxes\" \
+-> FormBox[
+RowBox[{
+SubscriptBox[
+StyleBox[\"c\", \"TI\"], \"3\"], \"\[LongEqual]\", \"0\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"c_3=0\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\):  \>\"", ",", "L1nonneg2"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.889182403513895*^9, 3.889182409126496*^9}, {
+   3.889182615179909*^9, 3.889182659360275*^9}, {3.8891827543531103`*^9, 
+   3.889182782626976*^9}, {3.8891828135532565`*^9, 3.8891829016616244`*^9}, {
+   3.8891829466624947`*^9, 3.8891829581581993`*^9}, {3.8891832924067397`*^9, 
+   3.8891833038609357`*^9}, {3.8891833659572835`*^9, 
+   3.8891834057973604`*^9}, {3.8892504474228673`*^9, 
+   3.8892504848337216`*^9}, {3.889250527177608*^9, 3.8892505297850485`*^9}, {
+   3.8892506150494623`*^9, 3.8892506988812704`*^9}, {3.8892507299904733`*^9, 
+   3.8892508844302015`*^9}, {3.8892509284437456`*^9, 3.889250933475668*^9}, {
+   3.889250972211768*^9, 3.8892509757467346`*^9}, {3.8892510192641277`*^9, 
+   3.88925103778354*^9}, {3.8892510975547943`*^9, 3.8892511155840015`*^9}, {
+   3.8892518763226166`*^9, 3.8892519072970066`*^9}, {3.8892520812026577`*^9, 
+   3.889252279061928*^9}, {3.8892523720324574`*^9, 3.8892523828003497`*^9}, 
+   3.8892531496810985`*^9, {3.8892575071636086`*^9, 3.8892575080681047`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[50]:=",ExpressionUUID->"32f4a8c8-0607-4cc9-8efe-38229e1d6e6e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{StyleBox[\\\"tr\\\", FontSlant -> \\\"Plain\\\"], StyleBox[\\\
+\"J\\\", \\\"TI\\\"], \\\"\[LongEqual]\\\", \\\"0\\\"}], TraditionalForm], \\\
+\"errors\\\" -> {}, \\\"input\\\" -> \\\"\\\\\\\\mathrm{tr}J=0\\\", \\\"state\
+\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\) for  \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "1"], "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        SubscriptBox["u", "1"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["d", "2"], " ", 
+           SubscriptBox["u", "2"]}], "+", 
+          RowBox[{
+           SubscriptBox["d", "3"], " ", 
+           SubscriptBox["u", "3"]}]}], ")"}], " ", 
+        SubscriptBox["\[Kappa]", "2"]}], 
+       RowBox[{
+        SubscriptBox["u", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           SubscriptBox["c", "1"], " ", 
+           SubscriptBox["u", "1"]}], "+", 
+          RowBox[{
+           SubscriptBox["c", "2"], " ", 
+           SubscriptBox["u", "2"]}]}], ")"}]}]]}]}], "}"}]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\"tr\", \
+FontSlant -> \"Plain\"], StyleBox[\"J\", \"TI\"], \"\[LongEqual]\", \"0\"}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\mathrm{tr}J=0\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\) for  ", {
+   Subscript[$CellContext`\[Kappa], 1] -> -Subscript[$CellContext`u, 1] 
+     Subscript[$CellContext`u, 2]^(-1) (
+       2 Subscript[$CellContext`c, 1] Subscript[$CellContext`u, 1] + 
+       Subscript[$CellContext`c, 2] Subscript[$CellContext`u, 2])^(-1) (
+      Subscript[$CellContext`d, 2] Subscript[$CellContext`u, 2] + 
+      Subscript[$CellContext`d, 3] Subscript[$CellContext`u, 3]) 
+     Subscript[$CellContext`\[Kappa], 2]}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.889252401124893*^9, 3.8892575104116354`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[50]:=",ExpressionUUID->"35c94287-746f-4fcb-b5e6-1cbb05d2c59c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SubscriptBox[StyleBox[\\\"L\\\", \\\"TI\\\"], \\\"1\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"L_1\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)=  \"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{"2", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["c", "2"], " ", 
+         SubscriptBox["d", "1"]}], "-", 
+        RowBox[{
+         SubscriptBox["c", "1"], " ", 
+         SubscriptBox["d", "2"]}]}], ")"}], "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", " ", 
+        SubsuperscriptBox["c", "1", "2"], " ", 
+        SubsuperscriptBox["c", "3", "2"], " ", 
+        SubsuperscriptBox["d", "2", "2"], " ", 
+        SubscriptBox["d", "3"]}], "+", 
+       RowBox[{
+        SubsuperscriptBox["c", "2", "2"], " ", 
+        SubscriptBox["d", "3"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           SubsuperscriptBox["c", "3", "2"], " ", 
+           SubsuperscriptBox["d", "1", "2"]}], "+", 
+          RowBox[{
+           SubscriptBox["c", "1"], " ", 
+           SubscriptBox["c", "3"], " ", 
+           SubscriptBox["d", "1"], " ", 
+           SubscriptBox["d", "3"]}], "+", 
+          RowBox[{
+           SubsuperscriptBox["c", "1", "2"], " ", 
+           SubsuperscriptBox["d", "3", "2"]}]}], ")"}]}], "-", 
+       RowBox[{
+        SubscriptBox["c", "2"], " ", 
+        SubscriptBox["c", "3"], " ", 
+        SubscriptBox["d", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubsuperscriptBox["c", "3", "2"], " ", 
+           SubsuperscriptBox["d", "1", "2"]}], "+", 
+          RowBox[{"3", " ", 
+           SubscriptBox["c", "1"], " ", 
+           SubscriptBox["c", "3"], " ", 
+           SubscriptBox["d", "1"], " ", 
+           SubscriptBox["d", "3"]}], "+", 
+          RowBox[{"4", " ", 
+           SubsuperscriptBox["c", "1", "2"], " ", 
+           SubsuperscriptBox["d", "3", "2"]}]}], ")"}]}]}], ")"}], " ", 
+     SubsuperscriptBox["\[Kappa]", "2", "2"]}], 
+    RowBox[{
+     SubscriptBox["c", "1"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["c", "3"], " ", 
+         SubscriptBox["d", "1"]}], "-", 
+        RowBox[{
+         SubscriptBox["c", "1"], " ", 
+         SubscriptBox["d", "3"]}]}], ")"}], "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["c", "3"], " ", 
+        SubscriptBox["d", "2"]}], "-", 
+       RowBox[{
+        SubscriptBox["c", "2"], " ", 
+        SubscriptBox["d", "3"]}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", 
+        SubscriptBox["c", "1"], " ", 
+        SubscriptBox["c", "3"], " ", 
+        SubscriptBox["d", "2"]}], "-", 
+       RowBox[{
+        SubscriptBox["c", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["c", "3"], " ", 
+           SubscriptBox["d", "1"]}], "+", 
+          RowBox[{
+           SubscriptBox["c", "1"], " ", 
+           SubscriptBox["d", "3"]}]}], ")"}]}]}], ")"}], " ", 
+     SubscriptBox["\[Kappa]", "3"]}]]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[SubscriptBox[StyleBox[\"L\", \"TI\
+\"], \"1\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"L_1\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)=  ", 2 
+   Subscript[$CellContext`c, 1]^(-1) (
+     Subscript[$CellContext`c, 2] Subscript[$CellContext`d, 1] - 
+     Subscript[$CellContext`c, 1] Subscript[$CellContext`d, 2])^2 (
+     Subscript[$CellContext`c, 3] Subscript[$CellContext`d, 1] - 
+     Subscript[$CellContext`c, 1] Subscript[$CellContext`d, 3])^(-2) (
+     Subscript[$CellContext`c, 3] Subscript[$CellContext`d, 2] - 
+     Subscript[$CellContext`c, 2] Subscript[$CellContext`d, 3])^(-1) (
+     2 Subscript[$CellContext`c, 1] Subscript[$CellContext`c, 3] 
+      Subscript[$CellContext`d, 2] - 
+     Subscript[$CellContext`c, 2] (
+      Subscript[$CellContext`c, 3] Subscript[$CellContext`d, 1] + 
+      Subscript[$CellContext`c, 1] Subscript[$CellContext`d, 3]))^(-1) (
+    4 Subscript[$CellContext`c, 1]^2 Subscript[$CellContext`c, 3]^2 
+     Subscript[$CellContext`d, 2]^2 Subscript[$CellContext`d, 3] + 
+    Subscript[$CellContext`c, 2]^2 
+     Subscript[$CellContext`d, 3] (
+      2 Subscript[$CellContext`c, 3]^2 Subscript[$CellContext`d, 1]^2 + 
+      Subscript[$CellContext`c, 1] Subscript[$CellContext`c, 3] 
+       Subscript[$CellContext`d, 1] Subscript[$CellContext`d, 3] + 
+      Subscript[$CellContext`c, 1]^2 Subscript[$CellContext`d, 3]^2) - 
+    Subscript[$CellContext`c, 2] Subscript[$CellContext`c, 3] 
+    Subscript[$CellContext`d, 2] (
+     Subscript[$CellContext`c, 3]^2 Subscript[$CellContext`d, 1]^2 + 
+     3 Subscript[$CellContext`c, 1] Subscript[$CellContext`c, 3] 
+      Subscript[$CellContext`d, 1] Subscript[$CellContext`d, 3] + 
+     4 Subscript[$CellContext`c, 1]^2 Subscript[$CellContext`d, 3]^2)) 
+   Subscript[$CellContext`\[Kappa], 2]^2/Subscript[$CellContext`\[Kappa], 3]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.889252401124893*^9, 3.889257510421343*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[50]:=",ExpressionUUID->"1bec2348-3cc7-4029-8e97-c8e09e0b43ef"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{SubscriptBox[StyleBox[\\\"L\\\", \\\"TI\\\"], \\\"1\\\"], \
+\\\"\[GreaterEqual]\\\", \\\"0\\\"}], TraditionalForm], \\\"errors\\\" -> {}, \
+\\\"input\\\" -> \\\"L_1\\\\\\\\geq0\\\", \\\"state\\\" -> \\\"Boxes\\\"|>,\\\
+\"TeXAssistantTemplate\\\"]\\) when \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{SubscriptBox[StyleBox[\\\"c\\\", \\\"TI\\\"], \\\"3\\\"], \
+\\\">\\\", \\\"0\\\"}], TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" \
+-> \\\"c_3>0\\\", \\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\
+\"]\\):  \"\>", "\[InvisibleSpace]", "False"}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{SubscriptBox[StyleBox[\"L\
+\", \"TI\"], \"1\"], \"\[GreaterEqual]\", \"0\"}], TraditionalForm], \"errors\
+\" -> {}, \"input\" -> \"L_1\\\\geq0\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\) when \!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[RowBox[{SubscriptBox[StyleBox[\"c\", \"TI\"], \"3\"], \">\", \"0\"}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"c_3>0\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\):  ", False],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.889252401124893*^9, 3.889257510431859*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[50]:=",ExpressionUUID->"aecc2cf1-b21c-4076-abcc-064a8dcfa14a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{SubscriptBox[StyleBox[\\\"L\\\", \\\"TI\\\"], \\\"1\\\"], \
+\\\"\[GreaterEqual]\\\", \\\"0\\\"}], TraditionalForm], \\\"errors\\\" -> {}, \
+\\\"input\\\" -> \\\"L_1\\\\\\\\geq0\\\", \\\"state\\\" -> \\\"Boxes\\\"|>,\\\
+\"TeXAssistantTemplate\\\"]\\) when \\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{SubscriptBox[StyleBox[\\\"c\\\", \\\"TI\\\"], \\\"3\\\"], \
+\\\"\[LongEqual]\\\", \\\"0\\\"}], TraditionalForm], \\\"errors\\\" -> {}, \\\
+\"input\\\" -> \\\"c_3=0\\\", \\\"state\\\" -> \
+\\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\):  \"\>", "\[InvisibleSpace]",
+    "False"}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{SubscriptBox[StyleBox[\"L\
+\", \"TI\"], \"1\"], \"\[GreaterEqual]\", \"0\"}], TraditionalForm], \"errors\
+\" -> {}, \"input\" -> \"L_1\\\\geq0\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\) when \!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[RowBox[{SubscriptBox[StyleBox[\"c\", \"TI\"], \"3\"], \
+\"\[LongEqual]\", \"0\"}], TraditionalForm], \"errors\" -> {}, \"input\" -> \
+\"c_3=0\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\):  ", False],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.889252401124893*^9, 3.889257510441879*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[50]:=",ExpressionUUID->"63ccf181-ebbf-401a-be26-cbe8b7655d05"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ "Hence, ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox[
+        StyleBox["L", "TI"], "1"], TraditionalForm], "errors" -> {}, "input" -> 
+     "L_1", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "58e1625b-1125-411d-8730-1dbed2145907"],
+ " is negative."
+}], "Text",
+ CellChangeTimes->{{3.8892524275257893`*^9, 
+  3.88925245428587*^9}},ExpressionUUID->"0ef6480d-fabd-4297-b7a8-\
+a5473882f37e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Case 10", "Subsubsection",
+ CellChangeTimes->{{3.8891796737353983`*^9, 
+  3.8891796842509966`*^9}},ExpressionUUID->"08df14a3-972c-4110-80cd-\
+4dcd77618c21"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Kappa]positive", "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Kappa]", "1"], ">", "0"}], "&&", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "2"], ">", "0"}], "&&", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "3"], ">", "0"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"absubst", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["a", "1"], "->", "2"}], ",", 
+     RowBox[{
+      SubscriptBox["b", "1"], "->", "0"}], ",", 
+     RowBox[{
+      SubscriptBox["a", "2"], "->", "1"}], ",", 
+     RowBox[{
+      SubscriptBox["b", "2"], "->", "1"}], ",", 
+     RowBox[{
+      SubscriptBox["a", "3"], "->", "0"}], ",", 
+     RowBox[{
+      SubscriptBox["b", "3"], "->", "0"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fg", "=", 
+   RowBox[{
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["\[Kappa]", "i"], 
+       SuperscriptBox["x", 
+        SubscriptBox["a", "i"]], 
+       SuperscriptBox["y", 
+        SubscriptBox["b", "i"]], 
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox["c", "i"], ",", 
+         SubscriptBox["d", "i"]}], "}"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}], "/.", "absubst"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"equil", "=", 
+   RowBox[{"Reduce", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Mu]", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["u", "1"], ",", 
+          SubscriptBox["u", "2"], ",", 
+          SubscriptBox["u", "3"]}], "}"}]}], "==", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["\[Kappa]", "1"], 
+            SuperscriptBox["x", 
+             SubscriptBox["a", "1"]], 
+            SuperscriptBox["y", 
+             SubscriptBox["b", "1"]]}], ",", 
+           RowBox[{
+            SubscriptBox["\[Kappa]", "2"], 
+            SuperscriptBox["x", 
+             SubscriptBox["a", "2"]], 
+            SuperscriptBox["y", 
+             SubscriptBox["b", "2"]]}], ",", 
+           RowBox[{
+            SubscriptBox["\[Kappa]", "3"], 
+            SuperscriptBox["x", 
+             SubscriptBox["a", "3"]], 
+            SuperscriptBox["y", 
+             SubscriptBox["b", "3"]]}]}], "}"}], "/.", "absubst"}], ")"}]}], "&&",
+       "\[Kappa]positive", "&&", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y"}], "}"}], ">", "0"}], "&&", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\[Mu]", ",", 
+         SubscriptBox["u", "1"], ",", 
+         SubscriptBox["u", "2"], ",", 
+         SubscriptBox["u", "3"]}], "}"}], ">", "0"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", "\[Mu]"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<positive equilibrium: \>\"", ",", "equil"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"cross", "=", 
+   RowBox[{"Cross", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       SubscriptBox["c", "1"], ",", 
+       SubscriptBox["c", "2"], ",", 
+       SubscriptBox["c", "3"]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       SubscriptBox["d", "1"], ",", 
+       SubscriptBox["d", "2"], ",", 
+       SubscriptBox["d", "3"]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"usubst", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["u", "1"], "->", 
+      RowBox[{"cross", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+     RowBox[{
+      SubscriptBox["u", "2"], "->", 
+      RowBox[{"cross", "[", 
+       RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+     RowBox[{
+      SubscriptBox["u", "3"], "->", 
+      RowBox[{"cross", "[", 
+       RowBox[{"[", "3", "]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.889252504523828*^9, 3.8892525045939426`*^9}, {
+  3.889252535568962*^9, 3.8892525704335637`*^9}, {3.889252936002802*^9, 
+  3.889253018965882*^9}, {3.8892531007119427`*^9, 3.8892531271489687`*^9}, {
+  3.8892552938393826`*^9, 3.889255294263103*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[64]:=",ExpressionUUID->"3446319d-97ee-4cac-a499-3a7df956dd90"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"positive equilibrium: \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["u", "1"], ">", "0"}], "&&", 
+    RowBox[{
+     SubscriptBox["u", "2"], ">", "0"}], "&&", 
+    RowBox[{
+     SubscriptBox["u", "3"], ">", "0"}], "&&", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "1"], ">", "0"}], "&&", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "2"], ">", "0"}], "&&", 
+    RowBox[{
+     SubscriptBox["\[Kappa]", "3"], ">", "0"}], "&&", 
+    RowBox[{"x", "\[Equal]", 
+     SqrtBox[
+      FractionBox[
+       RowBox[{
+        SubscriptBox["u", "1"], " ", 
+        SubscriptBox["\[Kappa]", "3"]}], 
+       RowBox[{
+        SubscriptBox["u", "3"], " ", 
+        SubscriptBox["\[Kappa]", "1"]}]]]}], "&&", 
+    RowBox[{"y", "\[Equal]", 
+     FractionBox[
+      RowBox[{"x", " ", 
+       SubscriptBox["u", "2"], " ", 
+       SubscriptBox["\[Kappa]", "1"]}], 
+      RowBox[{
+       SubscriptBox["u", "1"], " ", 
+       SubscriptBox["\[Kappa]", "2"]}]]}], "&&", 
+    RowBox[{"\[Mu]", "\[Equal]", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["x", "2"], " ", 
+       SubscriptBox["\[Kappa]", "1"]}], 
+      SubscriptBox["u", "1"]]}]}]}],
+  SequenceForm["positive equilibrium: ", 
+   And[Subscript[$CellContext`u, 1] > 0, Subscript[$CellContext`u, 2] > 0, 
+    Subscript[$CellContext`u, 3] > 0, Subscript[$CellContext`\[Kappa], 1] > 0,
+     Subscript[$CellContext`\[Kappa], 2] > 0, 
+    Subscript[$CellContext`\[Kappa], 3] > 
+    0, $CellContext`x == (Subscript[$CellContext`u, 1] 
+      Subscript[$CellContext`u, 3]^(-1) 
+      Subscript[$CellContext`\[Kappa], 1]^(-1) 
+      Subscript[$CellContext`\[Kappa], 3])^
+     Rational[1, 2], $CellContext`y == $CellContext`x 
+     Subscript[$CellContext`u, 1]^(-1) Subscript[$CellContext`u, 2] 
+     Subscript[$CellContext`\[Kappa], 1]/
+     Subscript[$CellContext`\[Kappa], 
+      2], $CellContext`\[Mu] == $CellContext`x^2 
+     Subscript[$CellContext`u, 1]^(-1) Subscript[$CellContext`\[Kappa], 1]]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.88925250646389*^9, 3.8892525394739656`*^9, 3.889252570951879*^9, {
+   3.8892529392032833`*^9, 3.8892530194882603`*^9}, 3.8892531303004227`*^9, 
+   3.8892552951247315`*^9, 3.8892575154819484`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[64]:=",ExpressionUUID->"c1656db4-3e66-4a9c-b114-e3abd2296be8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"equilibrium", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "->", 
+      SqrtBox[
+       FractionBox[
+        RowBox[{
+         SubscriptBox["u", "1"], " ", 
+         SubscriptBox["\[Kappa]", "3"]}], 
+        RowBox[{
+         SubscriptBox["u", "3"], " ", 
+         SubscriptBox["\[Kappa]", "1"]}]]]}], ",", 
+     RowBox[{"y", "->", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox["u", "2"], 
+        SubscriptBox["\[Kappa]", "2"]], " ", 
+       SqrtBox[
+        FractionBox[
+         RowBox[{
+          SubscriptBox["\[Kappa]", "1"], " ", 
+          SubscriptBox["\[Kappa]", "3"]}], 
+         RowBox[{
+          SubscriptBox["u", "1"], 
+          SubscriptBox["u", "3"]}]]]}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{"fg", ",", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}], "/.", 
+      "equilibrium"}], ",", "\[Kappa]positive"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"trJ", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Tr", "[", "J", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"detJ", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"Det", "[", "J", "]"}], ",", 
+     RowBox[{"\[Kappa]positive", "&&", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox["u", "1"], ",", 
+         SubscriptBox["u", "2"], ",", 
+         SubscriptBox["u", "3"]}], "}"}], ">", "0"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hopf", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"Simplify", "[", 
+      RowBox[{
+       RowBox[{"Solve", "[", 
+        RowBox[{
+         RowBox[{"trJ", "==", "0"}], "&&", "\[Kappa]positive", "&&", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            SubscriptBox["u", "1"], ",", 
+            SubscriptBox["u", "2"], ",", 
+            SubscriptBox["u", "3"]}], "}"}], ">", "0"}]}], "]"}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["u", "1"], ",", 
+          SubscriptBox["u", "2"], ",", 
+          SubscriptBox["u", "3"]}], "}"}], ">", "0"}]}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Omega]subst", "=", 
+   RowBox[{"{", 
+    RowBox[{"\[Omega]", "->", 
+     SqrtBox["detJ"]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+StyleBox[\"tr\", FontSlant -> \"Plain\"], 
+StyleBox[\"J\", \"TI\"], \"\[LongEqual]\", \"0\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"\\\\mathrm{tr}J=0\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\) for  \>\"", ",", "hopf"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"derivatives", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"GetDerivatives", "[", 
+      RowBox[{"fg", ",", "equilibrium"}], "]"}], ",", 
+     RowBox[{"\[Kappa]positive", "&&", 
+      RowBox[{
+       SubscriptBox["u", "1"], ">", "0"}], "&&", 
+      RowBox[{
+       SubscriptBox["u", "2"], ">", "0"}], "&&", 
+      RowBox[{
+       SubscriptBox["u", "3"], ">", "0"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L1", "=", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Simplify", "[", 
+        RowBox[{
+         SubscriptBox["L", "1"], "/.", "derivatives"}], "]"}], "/.", 
+       "\[Omega]subst"}], "/.", "hopf"}], ",", 
+     RowBox[{"\[Kappa]positive", "&&", 
+      RowBox[{
+       SubscriptBox["u", "1"], ">", "0"}], "&&", 
+      RowBox[{
+       SubscriptBox["u", "2"], ">", "0"}], "&&", 
+      RowBox[{
+       SubscriptBox["u", "3"], ">", "0"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SubscriptBox[
+StyleBox[\"L\", \"TI\"], \"1\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"L_1\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)=  \
+\>\"", ",", "L1"}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8892525860236626`*^9, 3.8892526493842454`*^9}, {
+  3.889252753141286*^9, 3.88925275491306*^9}, {3.889253079007223*^9, 
+  3.8892530809076023`*^9}, {3.889253157054189*^9, 3.8892531708954964`*^9}, {
+  3.8892532278323584`*^9, 3.889253314105675*^9}, {3.889253374351405*^9, 
+  3.8892533918839736`*^9}, {3.88925358125301*^9, 3.8892535867634068`*^9}, {
+  3.8892536570113907`*^9, 3.8892536697737036`*^9}, {3.8892552617854667`*^9, 
+  3.889255282450573*^9}, {3.889255319834939*^9, 3.8892553584286594`*^9}, {
+  3.8892554517432275`*^9, 3.8892558295166817`*^9}, {3.889255884049891*^9, 
+  3.889255890737481*^9}, {3.8892570517942576`*^9, 3.8892570789221354`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[71]:=",ExpressionUUID->"4a75f12d-b1e6-4c40-9770-b9845951bcbd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[RowBox[{StyleBox[\\\"tr\\\", FontSlant -> \\\"Plain\\\"], StyleBox[\\\
+\"J\\\", \\\"TI\\\"], \\\"\[LongEqual]\\\", \\\"0\\\"}], TraditionalForm], \\\
+\"errors\\\" -> {}, \\\"input\\\" -> \\\"\\\\\\\\mathrm{tr}J=0\\\", \\\"state\
+\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\) for  \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     SubscriptBox["c", "1"], "\[Rule]", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["c", "2"], " ", 
+         SubscriptBox["u", "2"]}], 
+        RowBox[{"2", " ", 
+         SubscriptBox["u", "1"]}]]}], "-", 
+      FractionBox[
+       RowBox[{
+        SubscriptBox["d", "2"], " ", 
+        SubscriptBox["\[Kappa]", "2"]}], 
+       RowBox[{"2", " ", 
+        SubscriptBox["\[Kappa]", "1"]}]]}]}], "}"}]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\"tr\", \
+FontSlant -> \"Plain\"], StyleBox[\"J\", \"TI\"], \"\[LongEqual]\", \"0\"}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\mathrm{tr}J=0\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\) for  ", {
+   Subscript[$CellContext`c, 1] -> 
+    Rational[-1, 2] Subscript[$CellContext`c, 2] 
+      Subscript[$CellContext`u, 1]^(-1) Subscript[$CellContext`u, 2] + 
+     Rational[-1, 2] Subscript[$CellContext`d, 2] 
+      Subscript[$CellContext`\[Kappa], 1]^(-1) 
+      Subscript[$CellContext`\[Kappa], 2]}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.88925707341978*^9, 3.8892570794361916`*^9}, 
+   3.889257518604949*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[71]:=",ExpressionUUID->"1367fbb1-e78f-4ede-ae6c-931f31e4b7e8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*TemplateBox[<|\\\"boxes\\\" -> \
+FormBox[SubscriptBox[StyleBox[\\\"L\\\", \\\"TI\\\"], \\\"1\\\"], \
+TraditionalForm], \\\"errors\\\" -> {}, \\\"input\\\" -> \\\"L_1\\\", \
+\\\"state\\\" -> \\\"Boxes\\\"|>,\\\"TeXAssistantTemplate\\\"]\\)=  \"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{"2", " ", 
+     SubscriptBox["u", "1"], " ", 
+     SubscriptBox["u", "3"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["c", "2"], " ", 
+        SubscriptBox["u", "2"], " ", 
+        SubscriptBox["\[Kappa]", "1"]}], "-", 
+       RowBox[{
+        SubscriptBox["d", "2"], " ", 
+        SubscriptBox["u", "1"], " ", 
+        SubscriptBox["\[Kappa]", "2"]}]}], ")"}]}], 
+    SqrtBox[
+     FractionBox[
+      RowBox[{
+       SubsuperscriptBox["u", "1", "5"], " ", 
+       SubscriptBox["u", "3"], " ", 
+       SubscriptBox["\[Kappa]", "3"]}], 
+      SubscriptBox["\[Kappa]", "1"]]]]}],
+  SequenceForm[
+  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[SubscriptBox[StyleBox[\"L\", \"TI\
+\"], \"1\"], TraditionalForm], \"errors\" -> {}, \"input\" -> \"L_1\", \
+\"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)=  ", 2 
+   Subscript[$CellContext`u, 1] 
+   Subscript[$CellContext`u, 3] (
+    Subscript[$CellContext`c, 2] Subscript[$CellContext`u, 2] 
+     Subscript[$CellContext`\[Kappa], 1] - Subscript[$CellContext`d, 2] 
+    Subscript[$CellContext`u, 1] 
+    Subscript[$CellContext`\[Kappa], 2]) (Subscript[$CellContext`u, 1]^5 
+     Subscript[$CellContext`u, 3] Subscript[$CellContext`\[Kappa], 1]^(-1) 
+     Subscript[$CellContext`\[Kappa], 3])^Rational[-1, 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.88925707341978*^9, 3.8892570794361916`*^9}, 
+   3.8892575189751883`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->
+  "During evaluation of \
+In[71]:=",ExpressionUUID->"1cd1d1e3-4534-44d2-a706-2251068cfe48"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ "The expression in the enumerator of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox[
+        StyleBox["L", "TI"], "1"], TraditionalForm], "errors" -> {}, "input" -> 
+     "L_1", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "969a552f-06c1-46f6-a4f1-2eb10148d80f"],
+ " is never nonnegative:"
+}], "Text",
+ CellChangeTimes->{{3.889256965077416*^9, 3.8892569992329082`*^9}, {
+  3.8892575343325825`*^9, 
+  3.8892575354694595`*^9}},ExpressionUUID->"f7dca075-e070-4e1a-a7c0-\
+8ce90acebc20"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["c", "2"], " ", 
+        SubscriptBox["u", "2"], " ", 
+        SubscriptBox["\[Kappa]", "1"]}], "-", 
+       RowBox[{
+        SubscriptBox["d", "2"], " ", 
+        SubscriptBox["u", "1"], " ", 
+        SubscriptBox["\[Kappa]", "2"]}]}], "/.", "usubst"}], "]"}], ">=", 
+    "0"}], "&&", 
+   RowBox[{
+    SubscriptBox["c", "1"], "==", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["c", "2"], " ", 
+          SubscriptBox["u", "2"]}], 
+         RowBox[{"2", " ", 
+          SubscriptBox["u", "1"]}]]}], "-", 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["d", "2"], " ", 
+         SubscriptBox["\[Kappa]", "2"]}], 
+        RowBox[{"2", " ", 
+         SubscriptBox["\[Kappa]", "1"]}]]}], "/.", "usubst"}], ")"}]}], "&&", 
+   "\[Kappa]positive", "&&", 
+   RowBox[{
+    SubscriptBox["c", "1"], ">", "0"}], "&&", 
+   RowBox[{
+    SubscriptBox["c", "2"], "==", 
+    RowBox[{"-", "1"}]}], "&&", 
+   RowBox[{
+    SubscriptBox["c", "3"], ">", "0"}], "&&", 
+   RowBox[{
+    SubscriptBox["d", "1"], ">", "0"}], "&&", 
+   RowBox[{
+    SubscriptBox["d", "2"], "==", 
+    RowBox[{"-", "1"}]}], "&&", 
+   RowBox[{
+    SubscriptBox["d", "3"], ">=", "0"}], "&&", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        SubscriptBox["d", "3"], 
+        SubscriptBox["c", "3"]], "+", 
+       FractionBox[
+        SubscriptBox["d", "1"], 
+        SubscriptBox["c", "1"]]}], ")"}]}], "<", 
+    FractionBox[
+     SubscriptBox["d", "2"], 
+     SubscriptBox["c", "2"]], "<", 
+    FractionBox[
+     SubscriptBox["d", "1"], 
+     SubscriptBox["c", "1"]]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8892559344204607`*^9, 3.8892559366245155`*^9}, {
+  3.8892562952551117`*^9, 3.8892563065836945`*^9}, {3.889256728747972*^9, 
+  3.8892568379005766`*^9}, {3.889256895956062*^9, 3.8892569351460953`*^9}, {
+  3.889257094137475*^9, 3.88925709995724*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88],
+ CellLabel->"In[81]:=",ExpressionUUID->"7ad60769-30fe-4080-902f-dd45bee7eaa1"],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{{3.8892568047323384`*^9, 3.889256838917493*^9}, {
+   3.889256923102955*^9, 3.88925693652495*^9}, 3.889257101327774*^9, 
+   3.8892575376942987`*^9},
+ Background->RGBColor[0.88, 1, 0.88],
+ CellLabel->"Out[81]=",ExpressionUUID->"36fc4df4-86ed-48e2-9d81-4faadd113f79"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Hence, ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox[
+        StyleBox["L", "TI"], "1"], TraditionalForm], "errors" -> {}, "input" -> 
+     "L_1", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "217a333c-8ddd-418f-83f2-4ebf48b6fddf"],
+ " is negative."
+}], "Text",
+ CellChangeTimes->{{3.889257002360527*^9, 
+  3.8892570244831114`*^9}},ExpressionUUID->"0189527e-da29-4552-9913-\
+3ef5e22778b8"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1070.25, 597.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+Magnification:>0.75 Inherited,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"aff13d4e-128c-4b5d-80a6-4463c1262fba"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 205, 3, 74, "Title",ExpressionUUID->"bd38881f-37ab-4da5-8c1a-90b058fdc73f"],
+Cell[788, 27, 407, 11, 24, "Author",ExpressionUUID->"b0a3d70e-51d6-47f5-acc1-c1239d8600b1"],
+Cell[1198, 40, 704, 12, 65, "Abstract",ExpressionUUID->"e910b20b-cd37-4cd5-b4f9-d63b9707500b"],
+Cell[CellGroupData[{
+Cell[1927, 56, 170, 3, 50, "Section",ExpressionUUID->"4faec200-9809-43ce-af05-4ee8c328e310"],
+Cell[CellGroupData[{
+Cell[2122, 63, 158, 3, 41, "Subsection",ExpressionUUID->"c4c65ef8-15bb-490d-aca8-b8e9594126fc"],
+Cell[2283, 68, 4571, 120, 151, "Text",ExpressionUUID->"75539ac0-1ac6-40dd-a1a1-7c109f3a9e66"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6891, 193, 156, 3, 41, "Subsection",ExpressionUUID->"421fc257-2c5a-41f4-8678-1d799d535048"],
+Cell[7050, 198, 341, 8, 27, "Text",ExpressionUUID->"7e085f88-fe22-4116-bb11-c1ce9d8ca84e"],
+Cell[7394, 208, 5667, 142, 170, "Input",ExpressionUUID->"e3df8a95-485f-42b1-9df5-cb7905458387"],
+Cell[13064, 352, 1514, 48, 48, "Input",ExpressionUUID->"4b37dbc2-c0da-4dbe-888e-b95778dae504"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14627, 406, 241, 4, 50, "Section",ExpressionUUID->"fdbb0d59-9097-4b42-8cb8-62c3cee09196"],
+Cell[CellGroupData[{
+Cell[14893, 414, 175, 3, 41, "Subsection",ExpressionUUID->"b9826fc4-01fd-4cc7-a630-a433190b42ef"],
+Cell[CellGroupData[{
+Cell[15093, 421, 239, 4, 34, "Subsubsection",ExpressionUUID->"6defa764-3d6c-4194-9269-f84812437d67"],
+Cell[CellGroupData[{
+Cell[15357, 429, 1676, 51, 64, "Input",ExpressionUUID->"210df014-ff58-4259-b9f9-43952db6ea50"],
+Cell[17036, 482, 2999, 76, 56, "Print",ExpressionUUID->"86a733c8-b1d1-446b-afdc-c13608540c8f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20072, 563, 3211, 84, 168, "Input",ExpressionUUID->"93918395-75e6-4631-b8a3-d35f5f95049d"],
+Cell[CellGroupData[{
+Cell[23308, 651, 1596, 34, 47, "Print",ExpressionUUID->"a6e9aca6-208f-4fad-a42b-214cd3305dbe"],
+Cell[24907, 687, 1964, 43, 44, "Print",ExpressionUUID->"c112b8e5-2b74-4f5e-94fe-22c842a1c178"],
+Cell[26874, 732, 1462, 29, 44, "Print",ExpressionUUID->"17b0c850-c0a6-4ede-811e-0ce738026925"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28397, 768, 198, 3, 34, "Subsubsection",ExpressionUUID->"5547c1ee-523e-45bf-a175-ff32624056e5"],
+Cell[CellGroupData[{
+Cell[28620, 775, 1427, 44, 64, "Input",ExpressionUUID->"b6fa9a7c-cf79-4efd-9854-f131f56c690b"],
+Cell[30050, 821, 2366, 59, 54, "Print",ExpressionUUID->"c1b9e383-c40f-4b9b-b44c-6af4431fbaa7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32453, 885, 3289, 90, 186, "Input",ExpressionUUID->"36c05203-3afd-410c-9ebc-f707644880d8"],
+Cell[CellGroupData[{
+Cell[35767, 979, 1573, 30, 47, "Print",ExpressionUUID->"39c7de45-9568-45da-8657-fa95d7f8b3cb"],
+Cell[37343, 1011, 1808, 36, 49, "Print",ExpressionUUID->"a3610a96-f4b7-42ef-b5e4-3f0d250d7681"],
+Cell[39154, 1049, 1525, 29, 49, "Print",ExpressionUUID->"c98968d4-0a74-4d8d-b458-0ecf53645510"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40740, 1085, 197, 3, 34, "Subsubsection",ExpressionUUID->"3b3cb6f1-87b8-4175-a0dc-886409e99a08"],
+Cell[CellGroupData[{
+Cell[40962, 1092, 1430, 44, 64, "Input",ExpressionUUID->"3eedcdca-c030-49ac-9f5d-89592003afc7"],
+Cell[42395, 1138, 2135, 57, 52, "Print",ExpressionUUID->"b5bcc278-e6a9-4261-97d7-0b437edf19c7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44567, 1200, 2868, 79, 168, "Input",ExpressionUUID->"80da2181-8610-460f-816d-a1e5d8b33aef"],
+Cell[CellGroupData[{
+Cell[47460, 1283, 1212, 25, 47, "Print",ExpressionUUID->"27bca638-0b78-431e-bac9-a25740b9b135"],
+Cell[48675, 1310, 1366, 29, 44, "Print",ExpressionUUID->"d63f887f-eb11-4b8e-a126-1223d82ffc96"],
+Cell[50044, 1341, 1239, 25, 46, "Print",ExpressionUUID->"09254577-b5e5-4fbf-a1a2-3453c7c15784"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51356, 1374, 180, 3, 41, "Subsection",ExpressionUUID->"4a05536e-72a1-45bd-9f71-cbc4d1fa24bc"],
+Cell[CellGroupData[{
+Cell[51561, 1381, 161, 3, 34, "Subsubsection",ExpressionUUID->"2853b864-cbf7-4e6d-be42-f4e58b541e21"],
+Cell[CellGroupData[{
+Cell[51747, 1388, 5536, 145, 124, "Input",ExpressionUUID->"8b8d88fe-95a3-4017-a540-46afb949c017"],
+Cell[57286, 1535, 2107, 51, 49, "Print",ExpressionUUID->"a2cce513-c595-476b-b3e0-4e82a1b245d3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59430, 1591, 6986, 193, 268, "Input",ExpressionUUID->"32f4a8c8-0607-4cc9-8efe-38229e1d6e6e"],
+Cell[CellGroupData[{
+Cell[66441, 1788, 2194, 51, 45, "Print",ExpressionUUID->"35c94287-746f-4fcb-b5e6-1cbb05d2c59c"],
+Cell[68638, 1841, 5378, 131, 49, "Print",ExpressionUUID->"1bec2348-3cc7-4029-8e97-c8e09e0b43ef"],
+Cell[74019, 1974, 1440, 24, 32, "Print",ExpressionUUID->"aecc2cf1-b21c-4076-abcc-064a8dcfa14a"],
+Cell[75462, 2000, 1466, 25, 32, "Print",ExpressionUUID->"63ccf181-ebbf-401a-be26-cbe8b7655d05"]
+}, Open  ]]
+}, Open  ]],
+Cell[76955, 2029, 489, 14, 29, "Text",ExpressionUUID->"0ef6480d-fabd-4297-b7a8-a5473882f37e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77481, 2048, 162, 3, 34, "Subsubsection",ExpressionUUID->"08df14a3-972c-4110-80cd-4dcd77618c21"],
+Cell[CellGroupData[{
+Cell[77668, 2055, 4244, 133, 124, "Input",ExpressionUUID->"3446319d-97ee-4cac-a499-3a7df956dd90"],
+Cell[81915, 2190, 2402, 62, 49, "Print",ExpressionUUID->"c1656db4-3e66-4a9c-b114-e3abd2296be8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[84354, 2257, 5022, 142, 193, "Input",ExpressionUUID->"4a75f12d-b1e6-4c40-9770-b9845951bcbd"],
+Cell[CellGroupData[{
+Cell[89401, 2403, 1777, 42, 45, "Print",ExpressionUUID->"1367fbb1-e78f-4ede-ae6c-931f31e4b7e8"],
+Cell[91181, 2447, 1915, 46, 66, "Print",ExpressionUUID->"1cd1d1e3-4534-44d2-a706-2251068cfe48"]
+}, Open  ]]
+}, Open  ]],
+Cell[93123, 2497, 581, 15, 29, "Text",ExpressionUUID->"f7dca075-e070-4e1a-a7c0-8ce90acebc20"],
+Cell[CellGroupData[{
+Cell[93729, 2516, 2254, 71, 50, "Input",ExpressionUUID->"7ad60769-30fe-4080-902f-dd45bee7eaa1"],
+Cell[95986, 2589, 316, 5, 36, "Output",ExpressionUUID->"36fc4df4-86ed-48e2-9d81-4faadd113f79"]
+}, Open  ]],
+Cell[96317, 2597, 490, 14, 29, "Text",ExpressionUUID->"0189527e-da29-4552-9913-3ef5e22778b8"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
