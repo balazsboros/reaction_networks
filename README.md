@@ -1,6 +1,6 @@
 Supplementary materials to some of my papers on chemical reaction networks.  
 Mainly Mathematica and MATLAB codes. Mathematica notebooks (.nb files) are also saved as a .pdf file.  
-A list of all of my publications can be found at https://web.cs.elte.hu/~bboros/ (temporarily unavailable, sorry).  
+A list of all of my publications can be found at https://sites.google.com/view/balazsboros.  
 
 ### /3reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
