@@ -2,5 +2,5 @@ A Mathematica notebook (.nb file, also saved as a .pdf file) containing the foca
 
 M. Banaji, B. Boros, J. Hofbauer  
 **Oscillations in three-species quadratic mass-action systems**  
-*Submitted*, 2023  
-https://arxiv.org/pdf/2304.02303.pdf  
+*Studies in Applied Mathematics*, 2023  
+https://onlinelibrary.wiley.com/doi/epdf/10.1111/sapm.12639  
