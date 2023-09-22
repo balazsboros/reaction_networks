@@ -5,8 +5,8 @@ A list of all of my publications can be found at https://sites.google.com/view/b
 ### /3reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Oscillations in three-reaction quadratic mass-action systems**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2023  
-&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2304.02303.pdf  
+&nbsp;&nbsp;&nbsp;&nbsp;*Studies in Applied Mathematics*, 2023  
+&nbsp;&nbsp;&nbsp;&nbsp;https://onlinelibrary.wiley.com/doi/epdf/10.1111/sapm.12639  
 
 ### /3species_4reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros  
