@@ -26,17 +26,17 @@ ___
 &nbsp;&nbsp;&nbsp;&nbsp;*Journal of Dynamics and Differential Equations*, 2021  
 &nbsp;&nbsp;&nbsp;&nbsp;https://link.springer.com/content/pdf/10.1007/s10884-021-10051-z.pdf
 ___
-### lift_bifurcations
-&nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
-&nbsp;&nbsp;&nbsp;&nbsp;**The inheritance of local bifurcations in mass action networks**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2023  
-&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2312.XYZVW.pdf  
-___
 ### feinberg_berner_wilhelm_heinrich
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Some minimal bimolecular mass-action systems with limit cycles**  
 &nbsp;&nbsp;&nbsp;&nbsp;*Nonlinear Analysis: Real World Applications*, 72:103839, 2023  
 &nbsp;&nbsp;&nbsp;&nbsp;https://www.sciencedirect.com/science/article/pii/S1468121823000093/pdf
+___
+### lift_bifurcations
+&nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
+&nbsp;&nbsp;&nbsp;&nbsp;**The inheritance of local bifurcations in mass action networks**  
+&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2023  
+&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2312.XYZVW.pdf  
 ___
 ### parallelograms
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
