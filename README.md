@@ -26,6 +26,12 @@ A list of all of my publications can be found at https://sites.google.com/view/b
 &nbsp;&nbsp;&nbsp;&nbsp;*Journal of Dynamics and Differential Equations*, 2021  
 &nbsp;&nbsp;&nbsp;&nbsp;https://link.springer.com/content/pdf/10.1007/s10884-021-10051-z.pdf
 
+### /lift_bifurcations
+&nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
+&nbsp;&nbsp;&nbsp;&nbsp;**The inheritance of local bifurcations in mass action networks**  
+&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2023  
+&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2312.XYZVW.pdf  
+
 ### /feinberg_berner_wilhelm_heinrich
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Some minimal bimolecular mass-action systems with limit cycles**  
