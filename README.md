@@ -36,7 +36,7 @@ ___
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**The inheritance of local bifurcations in mass action networks**  
 &nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2023  
-&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2312.XYZVW.pdf  
+&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2312.12897.pdf  
 ___
 ### parallelograms
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
