@@ -5,7 +5,7 @@ ___
 ### 3reactions
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Oscillations in three-reaction quadratic mass-action systems**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Studies in Applied Mathematics*, 2023  
+&nbsp;&nbsp;&nbsp;&nbsp;*Studies in Applied Mathematics*, 152(1):249-278, 2024  
 &nbsp;&nbsp;&nbsp;&nbsp;https://onlinelibrary.wiley.com/doi/epdf/10.1111/sapm.12639  
 ___
 ### 3species_4reactions
