@@ -23,7 +23,7 @@ ___
 ### dfc1thm_oscillation
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Oscillations in planar deficiency-one mass-action systems**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Journal of Dynamics and Differential Equations*, 2021  
+&nbsp;&nbsp;&nbsp;&nbsp;*Journal of Dynamics and Differential Equations*, 36(1):S175-S197, 2024  
 &nbsp;&nbsp;&nbsp;&nbsp;https://link.springer.com/content/pdf/10.1007/s10884-021-10051-z.pdf
 ___
 ### feinberg_berner_wilhelm_heinrich
