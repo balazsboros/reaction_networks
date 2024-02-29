@@ -2,5 +2,5 @@ A Mathematica notebook (.nb file, also saved as a .pdf file) containing the calc
 
 B. Boros, J. Hofbauer  
 **Oscillations in planar deficiency-one mass-action systems**  
-*Journal of Dynamics and Differential Equations*, 36(1):S175-S197, 2021  
+*Journal of Dynamics and Differential Equations*, 36(1):S175-S197, 2024  
 https://link.springer.com/content/pdf/10.1007/s10884-021-10051-z.pdf
