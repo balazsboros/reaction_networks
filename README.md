@@ -43,3 +43,9 @@ ___
 &nbsp;&nbsp;&nbsp;&nbsp;**Limit cycles in mass-conserving deficiency-one mass-action systems**  
 &nbsp;&nbsp;&nbsp;&nbsp;*Electronic Journal of Qualitative Theory of Differential Equations*, 2022(42):1-18, 2022  
 &nbsp;&nbsp;&nbsp;&nbsp;http://www.math.u-szeged.hu/ejqtde/p9812.pdf
+___
+### quadratic_2_4_2
+&nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
+&nbsp;&nbsp;&nbsp;&nbsp;**Bifurcations in planar, quadratic mass-action networks with few reactions and low molecularity**  
+&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2024  
+&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2406.XYZUV.pdf  
