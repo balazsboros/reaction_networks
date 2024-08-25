@@ -47,5 +47,5 @@ ___
 ### quadratic_2_4_2
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Bifurcations in planar, quadratic mass-action networks with few reactions and low molecularity**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2024  
-&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2406.13451.pdf  
+&nbsp;&nbsp;&nbsp;&nbsp;*Nonlinear Dynamics*, 2024  
+&nbsp;&nbsp;&nbsp;&nbsp;https://link.springer.com/article/10.1007/s11071-024-10068-1  
