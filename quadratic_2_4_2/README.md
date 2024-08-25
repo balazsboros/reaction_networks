@@ -2,5 +2,5 @@ A Mathematica notebook (.nb file, also saved as a .pdf file) containing the foca
 
 M. Banaji, B. Boros, J. Hofbauer  
 **Bifurcations in planar, quadratic mass-action networks with few reactions and low molecularity**  
-*Submitted*, 2024  
-https://arxiv.org/pdf/2406.134451.pdf  
+*Nonlinear Dynamics*, 2024  
+https://link.springer.com/article/10.1007/s11071-024-10068-1  
