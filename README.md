@@ -35,8 +35,8 @@ ___
 ### lift_bifurcations
 &nbsp;&nbsp;&nbsp;&nbsp;M. Banaji, B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**The inheritance of local bifurcations in mass action networks**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2023  
-&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org/pdf/2312.12897.pdf  
+&nbsp;&nbsp;&nbsp;&nbsp;*Journal of Nonlinear Science*, 35(4):72, 2025  
+&nbsp;&nbsp;&nbsp;&nbsp;https://link.springer.com/article/10.1007/s00332-025-10165-4  
 ___
 ### parallelograms
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
