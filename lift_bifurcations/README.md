@@ -2,5 +2,5 @@ A Mathematica notebook (.nb file, also saved as a .pdf file) containing the foca
 
 M. Banaji, B. Boros, J. Hofbauer  
 **The inheritance of local bifurcations in mass action networks**  
-*Submitted*, 2023  
-https://arxiv.org/pdf/2312.12897.pdf  
+*Journal of Nonlinear Science*, 35(4):72, 2025  
+https://link.springer.com/article/10.1007/s00332-025-10165-4  
