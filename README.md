@@ -26,6 +26,12 @@ ___
 &nbsp;&nbsp;&nbsp;&nbsp;*Journal of Dynamics and Differential Equations*, 36(1):S175-S197, 2024  
 &nbsp;&nbsp;&nbsp;&nbsp;https://link.springer.com/content/pdf/10.1007/s10884-021-10051-z.pdf
 ___
+### disguised_toric_flux_cone
+&nbsp;&nbsp;&nbsp;&nbsp;B. Boros, G. Craciun, O. Henriksson, J. Jin, D. Rojas La Luz  
+&nbsp;&nbsp;&nbsp;&nbsp;**A flux-based approach for analyzing the disguised toric locus of reaction networks**  
+&nbsp;&nbsp;&nbsp;&nbsp;*Submitted*, 2025  
+&nbsp;&nbsp;&nbsp;&nbsp;https://arxiv.org
+___
 ### feinberg_berner_wilhelm_heinrich
 &nbsp;&nbsp;&nbsp;&nbsp;B. Boros, J. Hofbauer  
 &nbsp;&nbsp;&nbsp;&nbsp;**Some minimal bimolecular mass-action systems with limit cycles**  
